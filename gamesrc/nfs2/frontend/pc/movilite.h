@@ -1,0 +1,16 @@
+#ifndef __MOVILITE_H
+#define __MOVILITE_H
+
+#include <renfs2.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* __MOVILITE_H */

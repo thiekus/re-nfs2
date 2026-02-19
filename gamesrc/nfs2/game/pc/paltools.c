@@ -1,0 +1,31 @@
+
+#include <renfs2.h>
+#include <game/pc/paltools.h>
+
+// GLOBAL: 0002:0000fc14 _r0 004dcc14 (data)
+// GLOBAL: 0002:0000fd14 _r1 004dcd14 (data)
+// GLOBAL: 0002:0000fe14 _r2 004dce14 (data)
+// GLOBAL: 0002:0000ff14 _g0 004dcf14 (data)
+// GLOBAL: 0002:00010014 _g1 004dd014 (data)
+// GLOBAL: 0002:00010114 _g2 004dd114 (data)
+// GLOBAL: 0002:00010214 _b0 004dd214 (data)
+// GLOBAL: 0002:00010314 _b1 004dd314 (data)
+// GLOBAL: 0002:00010414 _b2 004dd414 (data)
+
+// GLOBAL: 0001:0005cf14 Pal_PrintColourTable_ 0045df14 (code)
+// GLOBAL: 0001:0005cf83 Pal_PrintPalette_ 0045df83 (code)
+// GLOBAL: 0001:0005d01d Pal_PrintARGB_ 0045e01d (code)
+// GLOBAL: 0001:0005d0b7 Pal_ClosestColour_ 0045e0b7 (code)
+// GLOBAL: 0001:0005d101 Pal_CalcTransTable_ 0045e101 (code)
+// GLOBAL: 0001:0005d163 Pal_GetShapeFile888Pal_ 0045e163 (code)
+// GLOBAL: 0001:0005d1ce Pal_GetShapeFilePal_ 0045e1ce (code)
+// GLOBAL: 0001:0005d36f Pal_ConvertARGBTo768_ 0045e36f (code)
+// GLOBAL: 0001:0005d3e9 Pal_Convert768ToARGB_ 0045e3e9 (code)
+// GLOBAL: 0001:0005d463 Pal_CalcShapePixelCount_ 0045e463 (code)
+// GLOBAL: 0001:0005d4bf Pal_RemapShape_ 0045e4bf (code)
+// GLOBAL: 0001:0005d503 Pal_MakeRTFromRT_ 0045e503 (code)
+// GLOBAL: 0001:0005d559 Pal_MakeRTFromPal_ 0045e559 (code)
+// GLOBAL: 0001:0005d589 Pal_RemapShapeFile_ 0045e589 (code)
+// GLOBAL: 0001:0005d5eb Pal_RemapShapeFileToSysPal_ 0045e5eb (code)
+// GLOBAL: 0001:0005d622 Pal_RemapLutShapeFileToSysPal_ 0045e622 (code)
+// GLOBAL: 0001:0005d668 Paltools_LinearizeColor_ 0045e668 (code)

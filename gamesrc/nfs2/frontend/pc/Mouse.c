@@ -1,0 +1,36 @@
+
+#include <renfs2.h>
+#include <frontend/pc/Mouse.h>
+
+// GLOBAL: 0002:00012a40 _MouseArtFile 004dfa40 (data)
+// GLOBAL: 0002:00012a44 _mouseX 004dfa44 (data)
+// GLOBAL: 0002:00012a48 _mouseY 004dfa48 (data)
+// GLOBAL: 0002:00012a4c _mouseB 004dfa4c (data)
+
+// GLOBAL: 0003:00034c58 _hotSpotX2 0051dc58 (bss)
+// GLOBAL: 0003:00034ca8 _hotSpotX1 0051dca8 (bss)
+// GLOBAL: 0003:00034cf8 _hotSpotY2 0051dcf8 (bss)
+// GLOBAL: 0003:00034d48 _hotSpotY1 0051dd48 (bss)
+// GLOBAL: 0003:00034d98 _hotSpotIndex 0051dd98 (bss)
+// GLOBAL: 0003:00034de8 _mouseSave 0051dde8 (bss)
+// GLOBAL: 0003:00034dec _mouseBuffer 0051ddec (bss)
+// GLOBAL: 0003:00034df0 _oldMouseX 0051ddf0 (bss)
+// GLOBAL: 0003:00034df4 _oldMouseY 0051ddf4 (bss)
+// GLOBAL: 0003:00034df8 _filename2 0051ddf8 (bss)
+// GLOBAL: 0003:00034ef2 _forceUpdate 0051def2 (bss)
+// GLOBAL: 0003:00034ef4 _numHotSpots 0051def4 (bss)
+
+// GLOBAL: 0001:0007e61b Mouse_SetXY_ 0047f61b (code)
+// GLOBAL: 0001:0007e677 Mouse_ButtonPressed_ 0047f677 (code)
+// GLOBAL: 0001:0007e6f1 Mouse_ButtonDown_ 0047f6f1 (code)
+// GLOBAL: 0001:0007e72d Mouse_Initialize_ 0047f72d (code)
+// GLOBAL: 0001:0007eb44 Mouse_SetToCurrent_ 0047fb44 (code)
+// GLOBAL: 0001:0007ebe5 Mouse_Line_ 0047fbe5 (code)
+// GLOBAL: 0001:0007ec2b Mouse_HotSpotXY_ 0047fc2b (code)
+// GLOBAL: 0001:0007ec97 Mouse_HotSpot_ 0047fc97 (code)
+// GLOBAL: 0001:0007edc6 Mouse_Exit_ 0047fdc6 (code)
+// GLOBAL: 0001:0007ee3e Mouse_ForceUpdate_ 0047fe3e (code)
+// GLOBAL: 0001:0007ee61 Mouse_SetBounds_ 0047fe61 (code)
+// GLOBAL: 0001:0007ee7e Mouse_Show_ 0047fe7e (code)
+// GLOBAL: 0001:0007ef7b Mouse_Flash_ 0047ff7b (code)
+// GLOBAL: 0001:0007f04c Mouse_Hide_ 0048004c (code)

@@ -1,0 +1,47 @@
+# Known gimex functions
+# Module index 448 (win\obja\libgimex.obj)
+++gopen_.renfs2
+++gwopen_.renfs2
+++gclose_.renfs2
+++gread_.renfs2
+++gwrite_.renfs2
+++gseek_.renfs2
+++glen_.renfs2
+++gtell_.renfs2
+
+# Module index 143 (win\obja\galloc.obj)
+++galloc_.renfs2
+++gfree_.renfs2
+
+# Module index 290 (win\getm.asm)
+# ++_gputi.renfs2
+# ++_ggetm.renfs2
+# ++_gputm.renfs2
+# ++_ggeti.renfs2
+
+# Module index 294 (win\unref.asm)
+++_unrefpack.renfs2
+
+# Module index 295 (win\obja\unhuff.obj)
+++_unhuff.renfs2
+
+# Module index 296 (win\obja\unbtree.obj)
+++_unbtree.renfs2
+
+# Module index 329 (win\sdirect.c@win\obja\sdirect.obj)
+++iSNDdirectcaps_.renfs2
+++iSNDdirectstart_.renfs2
+++iSNDdirectstop_.renfs2
+++iSNDdirectserve_.renfs2
+++iSNDdirectcreate3dbuf_.renfs2
+++iSNDdirectremovebuf_.renfs2
+++iSNDdirectplay3d_.renfs2
+++iSNDdirectpos3d_.renfs2
+++iSNDdirectvol_.renfs2
+++iSNDdirectrate_.renfs2
+
+# Module index 403 (win\obja\mem.obj)
+++_getvirtualmem.renfs2
+++_getphysicalmem.renfs2
+++_getavailablephysicalmem.renfs2
+++_getusablephysicalmem.renfs2
