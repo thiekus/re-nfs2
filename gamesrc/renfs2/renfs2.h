@@ -61,6 +61,61 @@
     const __func_def __ptrfunc = (void*)loc; \
     return __ptrfunc(arg0, arg1, arg2)
 
+// 4 args watcall
+#define CALL_WATCALL_VOID_4(loc, type0, type1, type2, type3, arg0, arg1, arg2, arg3) \
+    typedef void WATCOM_CALL (*__func_def)(type0, type1, type2, type3); \
+    const __func_def __ptrfunc = (void*)loc; \
+    __ptrfunc(arg0, arg1, arg2, arg3)
+
+#define CALL_WATCALL_RESULT_4(retType, loc, type0, type1, type2, type3, arg0, arg1, arg2, arg3) \
+    typedef retType WATCOM_CALL (*__func_def)(type0, type1, type2, type3); \
+    const __func_def __ptrfunc = (void*)loc; \
+    return __ptrfunc(arg0, arg1, arg2, arg3)
+
+// 5 args watcall
+#define CALL_WATCALL_VOID_5(loc, type0, type1, type2, type3, type4, arg0, arg1, arg2, arg3, arg4) \
+    typedef void WATCOM_CALL (*__func_def)(type0, type1, type2, type3, type4); \
+    const __func_def __ptrfunc = (void*)loc; \
+    __ptrfunc(arg0, arg1, arg2, arg3, arg4)
+
+#define CALL_WATCALL_RESULT_5(retType, loc, type0, type1, type2, type3, type4, arg0, arg1, arg2, arg3, arg4) \
+    typedef retType WATCOM_CALL (*__func_def)(type0, type1, type2, type3, type4); \
+    const __func_def __ptrfunc = (void*)loc; \
+    return __ptrfunc(arg0, arg1, arg2, arg3, arg4)
+
+// 6 args watcall
+#define CALL_WATCALL_VOID_6(loc, type0, type1, type2, type3, type4, type5, arg0, arg1, arg2, arg3, arg4, arg5) \
+    typedef void WATCOM_CALL (*__func_def)(type0, type1, type2, type3, type4, type5); \
+    const __func_def __ptrfunc = (void*)loc; \
+    __ptrfunc(arg0, arg1, arg2, arg3, arg4, arg5)
+
+#define CALL_WATCALL_RESULT_6(retType, loc, type0, type1, type2, type3, type4, type5, arg0, arg1, arg2, arg3, arg4, arg5) \
+    typedef retType WATCOM_CALL (*__func_def)(type0, type1, type2, type3, type4, type5); \
+    const __func_def __ptrfunc = (void*)loc; \
+    return __ptrfunc(arg0, arg1, arg2, arg3, arg4, arg5)
+
+// 7 args watcall
+#define CALL_WATCALL_VOID_7(loc, type0, type1, type2, type3, type4, type5, type6, arg0, arg1, arg2, arg3, arg4, arg5, arg6) \
+    typedef void WATCOM_CALL (*__func_def)(type0, type1, type2, type3, type4, type5, type6); \
+    const __func_def __ptrfunc = (void*)loc; \
+    __ptrfunc(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
+
+#define CALL_WATCALL_RESULT_7(retType, loc, type0, type1, type2, type3, type4, type5, type6, arg0, arg1, arg2, arg3, arg4, arg5, arg6) \
+    typedef retType WATCOM_CALL (*__func_def)(type0, type1, type2, type3, type4, type5, type6); \
+    const __func_def __ptrfunc = (void*)loc; \
+    return __ptrfunc(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
+
+// 8 args watcall
+#define CALL_WATCALL_VOID_8(loc, type0, type1, type2, type3, type4, type5, type6, type7, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) \
+    typedef void WATCOM_CALL (*__func_def)(type0, type1, type2, type3, type4, type5, type6, type7); \
+    const __func_def __ptrfunc = (void*)loc; \
+    __ptrfunc(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+
+#define CALL_WATCALL_RESULT_8(retType, loc, type0, type1, type2, type3, type4, type5, type6, type7, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) \
+    typedef retType WATCOM_CALL (*__func_def)(type0, type1, type2, type3, type4, type5, type6, type7); \
+    const __func_def __ptrfunc = (void*)loc; \
+    return __ptrfunc(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+
 #define GAME_FUNC __declspec(dllexport)
 
 #endif // __RENFS2_H
