@@ -111,12 +111,14 @@
 // LOCAL : 0002:0001C3C0 (type = 9)
 // int useSpreadForce;
 
-// FAKE TYPES
+// FAKE TYPES: delete them after correctly implemented!
 struct Car_tObj{int fakeValue;};
 typedef struct Car_tObj Car_tObj;
+typedef void* Udff_tHandle;
 
 // GLOBAL: 0001:000000e0 AI_GetBestLane_ 004010e0 (code)
 // LOCAL : 0240: NEAR_RTN_386 (return type = 218)
+// ARG 0 : 0267: LOCAL (type = 9) (EAX)
 GAME_FUNC int DEFAULT_CALL AI_GetBestLane(int slice)
 {
     // int modSlice; // 0271: LOCAL (type = 9)
@@ -157,6 +159,7 @@ GAME_FUNC int DEFAULT_CALL AI_GetDriveSide(void)
 
 // GLOBAL: 0001:00000248 AI_ProcessBarrierCollision_ 00401248 (code)
 // LOCAL : 032C: NEAR_RTN_386 (return type = 220)
+// ARG 0 : 035E: LOCAL (type = 202) (EAX)
 GAME_FUNC void DEFAULT_CALL AI_ProcessBarrierCollision(Car_tObj* pCar)
 {
     // Car_tObj* otherCar; // 0374: LOCAL (type = 202)
@@ -168,6 +171,7 @@ GAME_FUNC void DEFAULT_CALL AI_ProcessBarrierCollision(Car_tObj* pCar)
 
 // GLOBAL: 0001:000002af AI_ProcessCollision_ 004012af (code)
 // LOCAL : 0382: NEAR_RTN_386 (return type = 220)
+// ARG 0 : 03AD: LOCAL (type = 202) (EAX)
 GAME_FUNC void DEFAULT_CALL AI_ProcessCollision(Car_tObj* pCar)
 {
     CALL_WATCALL_VOID_1(0x004012af,
@@ -178,6 +182,7 @@ GAME_FUNC void DEFAULT_CALL AI_ProcessCollision(Car_tObj* pCar)
 
 // GLOBAL: 0001:000003e8 AI_PickNewLane_ 004013e8 (code)
 // LOCAL : 03B7: NEAR_RTN_386 (return type = 220)
+// ARG 0 : 03DD: LOCAL (type = 202) (EAX)
 GAME_FUNC void DEFAULT_CALL AI_PickNewLane(Car_tObj* theCar)
 {
     // int adaptedSlice; // 03E9: LOCAL (type = 9)
@@ -191,6 +196,7 @@ GAME_FUNC void DEFAULT_CALL AI_PickNewLane(Car_tObj* theCar)
 
 // GLOBAL: 0001:00000582 AI_CalcLaneSlack_ 00401582 (code)
 // LOCAL : 0410: NEAR_RTN_386 (return type = 220)
+// ARG 0 : 0438: LOCAL (type = 202) (EAX)
 GAME_FUNC void DEFAULT_CALL AI_CalcLaneSlack(Car_tObj* theCar)
 {
     // int randval; // 0444: LOCAL (type = 9)
@@ -202,6 +208,8 @@ GAME_FUNC void DEFAULT_CALL AI_CalcLaneSlack(Car_tObj* theCar)
 
 // GLOBAL: 0001:0000061b AI_IsItTimeToStopYet_ 0040161b (code)
 // LOCAL : 0450: NEAR_RTN_386 (return type = 221)
+// ARG 0 : 047F: LOCAL (type = 9) (EAX)
+// ARG 1 : 048C: LOCAL (type = 9) (EDX)
 GAME_FUNC int DEFAULT_CALL AI_IsItTimeToStopYet(int carIndex, int slicesPastFinish)
 {
     CALL_WATCALL_RESULT_2(int, 0x0040161b,
@@ -212,6 +220,8 @@ GAME_FUNC int DEFAULT_CALL AI_IsItTimeToStopYet(int carIndex, int slicesPastFini
 
 // GLOBAL: 0001:00000669 AI_ParallelDistance_ 00401669 (code)
 // LOCAL : 04A1: NEAR_RTN_386 (return type = 222)
+// ARG 0 : 04CF: LOCAL (type = 202) (EAX)
+// ARG 1 : 04D7: LOCAL (type = 202) (EDX)
 GAME_FUNC int DEFAULT_CALL AI_ParallelDistance(Car_tObj* mo, Car_tObj* to)
 {
     // LIBCOORD relPos; // 04DF: LOCAL (type = 83)
@@ -224,6 +234,8 @@ GAME_FUNC int DEFAULT_CALL AI_ParallelDistance(Car_tObj* mo, Car_tObj* to)
 
 // GLOBAL: 0001:000006fc AI_SliceDistance_ 004016fc (code)
 // LOCAL : 04F6: NEAR_RTN_386 (return type = 221)
+// ARG 0 : 0521: LOCAL (type = 9) (EAX)
+// ARG 1 : 0527: LOCAL (type = 9) (EDX)
 GAME_FUNC int DEFAULT_CALL AI_SliceDistance(int a, int b)
 {
     // int diff; // 052D: LOCAL (type = 9)
@@ -236,6 +248,8 @@ GAME_FUNC int DEFAULT_CALL AI_SliceDistance(int a, int b)
 
 // GLOBAL: 0001:00000772 AI_IsDriveableLane_ 00401772 (code)
 // LOCAL : 0544: NEAR_RTN_386 (return type = 221)
+// ARG 0 : 0571: LOCAL (type = 9) (EAX)
+// ARG 1 : 057B: LOCAL (type = 9) (EDX)
 GAME_FUNC int DEFAULT_CALL AI_IsDriveableLane(int slice, int laneIndex)
 {
     // int profileIndex; // 0589: LOCAL (type = 9)
@@ -249,6 +263,7 @@ GAME_FUNC int DEFAULT_CALL AI_IsDriveableLane(int slice, int laneIndex)
 
 // GLOBAL: 0001:000007ee AI_GetProfileMask_ 004017ee (code)
 // LOCAL : 05B2: NEAR_RTN_386 (return type = 218)
+// ARG 0 : 05DC: LOCAL (type = 9) (EAX)
 GAME_FUNC int DEFAULT_CALL AI_GetProfileMask(int laneIndex)
 {
     // int profileIndex; // 05EA: LOCAL (type = 9)
@@ -261,6 +276,8 @@ GAME_FUNC int DEFAULT_CALL AI_GetProfileMask(int laneIndex)
 
 // GLOBAL: 0001:0000084d AI_IsDriveableLane_UsingMask_ 0040184d (code)
 // LOCAL : 060A: NEAR_RTN_386 (return type = 221)
+// ARG 0 : 0641: LOCAL (type = 9) (EAX)
+// ARG 1 : 064B: LOCAL (type = 9) (EDX)
 GAME_FUNC int DEFAULT_CALL AI_IsDriveableLane_UsingMask(int slice, int mask)
 {
     CALL_WATCALL_RESULT_2(int, 0x0040184d,
@@ -271,6 +288,8 @@ GAME_FUNC int DEFAULT_CALL AI_IsDriveableLane_UsingMask(int slice, int mask)
 
 // GLOBAL: 0001:00000887 AI_LaneIndex_ 00401887 (code)
 // LOCAL : 0654: NEAR_RTN_386 (return type = 221)
+// ARG 0 : 067B: LOCAL (type = 9) (EAX)
+// ARG 1 : 0685: LOCAL (type = 9) (EDX)
 GAME_FUNC int DEFAULT_CALL AI_LaneIndex(int slice, int position)
 {
     // int laneWidth; // 0692: LOCAL (type = 9)
@@ -285,6 +304,7 @@ GAME_FUNC int DEFAULT_CALL AI_LaneIndex(int slice, int position)
 
 // GLOBAL: 0001:0000096f AI_PutCarOnShoulder_ 0040196f (code)
 // LOCAL : 06CD: NEAR_RTN_386 (return type = 223)
+// ARG 0 : 06FA: LOCAL (type = 202) (EAX)
 GAME_FUNC void DEFAULT_CALL AI_PutCarOnShoulder(Car_tObj* theCar)
 {
     // int rightShoulder; // 0706: LOCAL (type = 9)
@@ -296,10 +316,69 @@ GAME_FUNC void DEFAULT_CALL AI_PutCarOnShoulder(Car_tObj* theCar)
 }
 
 // GLOBAL: 0001:00000a6e AI_IsNonStandardCarFile_ 00401a6e (code)
+// LOCAL : 0723: NEAR_RTN_386 (return type = 218)
+// ARG 0 : 0753: LOCAL (type = 9) (EAX)
+GAME_FUNC int DEFAULT_CALL AI_IsNonStandardCarFile(int index)
+{
+    // int nonStandardList[37]; // 075D: LOCAL (type = 224)
+    CALL_WATCALL_RESULT_1(int, 0x00401a6e,
+        int index,
+        index
+    );
+}
+
 // GLOBAL: 0001:00000abc AI_FigureOutPersonalityGameType_ 00401abc (code)
+// LOCAL : 0773: NEAR_RTN_386 (return type = 225)
+GAME_FUNC int DEFAULT_CALL AI_FigureOutPersonalityGameType()
+{
+    // pGameTypes_t pGameType; // 07A9: LOCAL (type = 228)
+    CALL_WATCALL_RESULT_0(int, 0x00401abc);
+}
+
 // GLOBAL: 0001:00000b25 AI_LoadGlueFactor_ 00401b25 (code)
+// LOCAL : 07B8: NEAR_RTN_386 (return type = 237)
+// ARG 0 : 07E1: LOCAL (type = 236) (EAX)
+GAME_FUNC void DEFAULT_CALL AI_LoadGlueFactor(Udff_tHandle handle)
+{
+    // glueConfigStruct glueConfig[3]; // 07ED: LOCAL (type = 252)
+    // glueConfigStruct* g; // 07FE: LOCAL (type = 253)
+    // int glue[2]; // 0805: LOCAL (type = 254)
+    // int lapIndex; // 080F: LOCAL (type = 9)
+    // int glueType; // 081C: LOCAL (type = 9)
+    CALL_WATCALL_VOID_1(0x00401b25,
+        Udff_tHandle handle,
+        handle
+    );
+}
+
 // GLOBAL: 0001:00000d31 AI_LoadPhysicsConfig_ 00401d31 (code)
+// LOCAL : 0829: NEAR_RTN_386 (return type = 237)
+// ARG 0 : 0855: LOCAL (type = 236) (EAX)
+GAME_FUNC void DEFAULT_CALL AI_LoadPhysicsConfig(Udff_tHandle handle)
+{
+    // AIPhysic_ModelConfig_t* model; // 0861: LOCAL (type = 255)
+    // int loop; // 086C: LOCAL (type = 9)
+    // int throwAway; // 0875: LOCAL (type = 9)
+    CALL_WATCALL_VOID_1(0x00401d31,
+        Udff_tHandle handle,
+        handle
+    );
+}
+
 // GLOBAL: 0001:00000ebd AI_LoadAIConfig_ 00401ebd (code)
+// LOCAL : 0883: NEAR_RTN_386 (return type = 237)
+// ARG 0 : 08AA: LOCAL (type = 236) (EAX)
+GAME_FUNC void DEFAULT_CALL AI_LoadAIConfig(Udff_tHandle handle)
+{
+    // int adjustloop; // 08B6: LOCAL (type = 9)
+    // int laneloop; // 08C5: LOCAL (type = 9)
+    // int doprint; // 08D2: LOCAL (type = 9)
+    CALL_WATCALL_VOID_1(0x00401ebd,
+        Udff_tHandle handle,
+        handle
+    );
+}
+
 // GLOBAL: 0001:00000f7b AI_LoadConfigs_ 00401f7b (code)
 // GLOBAL: 0001:00000fde AI_RestartAICar_ 00401fde (code)
 // GLOBAL: 0001:00001169 AI_InitAICar_ 00402169 (code)

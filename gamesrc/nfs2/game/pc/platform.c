@@ -8,6 +8,7 @@
 
 // GLOBAL: 0001:0005d763 Platform_AllocateTm_ 0045e763 (code)
 // LOCAL : 001E: NEAR_RTN_386 (return type = 371)
+// ARG 0 : 004A: LOCAL (type = 370) (EAX)
 GAME_FUNC char* DEFAULT_CALL Platform_AllocateTm(int* s)
 {
     CALL_WATCALL_RESULT_1(char*, 0x0045e763,
@@ -17,7 +18,8 @@ GAME_FUNC char* DEFAULT_CALL Platform_AllocateTm(int* s)
 }
 
 // GLOBAL: 0001:0005d7b5 Platform_FreeTm_ 0045e7b5 (code)
-// LOCAL : NEAR_RTN_386 (return type = 372)
+// LOCAL : 0051: NEAR_RTN_386 (return type = 372)
+// ARG 0 : 0078: LOCAL (type = 12) (EAX)
 GAME_FUNC void DEFAULT_CALL Platform_FreeTm(char* p)
 {
     CALL_WATCALL_VOID_1(0x0045e7b5,

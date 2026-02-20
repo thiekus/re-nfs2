@@ -107,6 +107,7 @@ GAME_FUNC void DEFAULT_CALL Nfs2_BefuddleCode()
 
 // GLOBAL: 0001:0002fe77 Nfs2_ChangeExtension_ 00430e77 (code)
 // LOCAL : 02A6: NEAR_RTN_386 (return type = 135)
+// ARG 0 : 02D2: LOCAL (type = 13) (EAX)
 GAME_FUNC void DEFAULT_CALL Nfs2_ChangeExtension(char* ext)
 {
     CALL_WATCALL_VOID_1(0x00430e77,
@@ -124,6 +125,7 @@ GAME_FUNC void DEFAULT_CALL Nfs2_ResetGame()
 
 // GLOBAL: 0001:0002fed0 Nfs2_GameModuleStartUp_ 00430ed0 (code)
 // LOCAL : 02FD: NEAR_RTN_386 (return type = 137)
+// ARG 0 : 032B: LOCAL (type = 136) (EAX)
 GAME_FUNC void DEFAULT_CALL Nfs2_GameModuleStartUp(int* FrontEndDataStream)
 {
     CALL_WATCALL_VOID_1(0x00430ed0,
@@ -142,6 +144,8 @@ GAME_FUNC void DEFAULT_CALL Nfs2_CleanUpGameModule()
 
 // GLOBAL: 0001:000300ea main_ 004310ea (code)
 // LOCAL : 0374: NEAR_RTN_386 (return type = 139)
+// ARG 0 : 0392: LOCAL (type = 9) (EAX)
+// ARG 1 : 039B: LOCAL (type = 138) (EDX)
 GAME_FUNC void DEFAULT_CALL main(int argc, char* argv[])
 {
     // int* setup; // 03A5: LOCAL (type = 136)

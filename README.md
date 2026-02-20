@@ -23,6 +23,8 @@ Still long way and very few, but so far:
 * Replace old `iSNDdirect` audio API to external DLL `eacsnd.dll` from NFS3 or NFSHS.
 * Make old Watcom project file for build using Watcom 10.6 back, for future build code comparison. OpenWatcom build should use `cmake` instead.
 
+For now, work be focused on redefining about 1500 game functions, because currently Watcom register based function call support on Ghidra is not that good that often need manual adjustment for make it decompile correctly.
+
 ## Building
 
 Due to NFS2 as Watcom EXE which did extensive use of `__watcall` (Watcom register based call conventions) and this was default on older Watcom/OpenWatcom compiler, only Watcom and OpenWatcom compiler can be used to build `renfs2.dll` for now. Install and setup [OpenWatcom v2 C/C++](https://github.com/open-watcom/open-watcom-v2/releases) and [CMake](https://cmake.org/download/) v3.26 or later.
