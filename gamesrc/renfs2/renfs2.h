@@ -2,6 +2,16 @@
 #ifndef __RENFS2_H
 #define __RENFS2_H
 
+// Build as DLL, which exports game functions as DLL symbols
+#define RENFS2_DLL
+
+// Enable original first edition demo limitations
+#define RENFS2_DEMO
+
+// Enable bugfixed code rather than original.
+// This applies only on game code, not eaclib functions code.
+#define RENFS2_BUGFIX
+
 // On OpenWatcom v1.4 and later, enforce __watcall
 // for use Watcom register-based call convention
 // https://web.archive.org/web/20210324032216/http://wiki.openwatcom.org/index.php/C_Compilers_Release_Changes
@@ -10,8 +20,17 @@
 #define DEFAULT_CALL __watcall
 #define WATCOM_CALL __watcall
 #else
+// Before OpenWatcom 1.4, it is no defined __watcall
 #define DEFAULT_CALL
 #define WATCOM_CALL
+#endif
+
+// Macro to export game functions when build as DLL.
+// Fortunately, Watcom/OpenWatcom understands inline dllexport just like MSVC.
+#ifdef RENFS2_DLL
+#define GAME_FUNC __declspec(dllexport)
+#else
+#define GAME_FUNC
 #endif
 
 // Helper macros for calling back to original function on stubbed functions
@@ -216,7 +235,5 @@
     typedef retType __cdecl (*__func_def)(type0, type1, type2, type3, type4, type5, type6, type7); \
     const __func_def __ptrfunc = (void*)loc; \
     return __ptrfunc(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
-
-#define GAME_FUNC __declspec(dllexport)
 
 #endif // __RENFS2_H

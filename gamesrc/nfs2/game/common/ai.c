@@ -16,7 +16,7 @@
 
 // GLOBAL: 0002:0000be80 _pGameTypesDes 004d8e80 (data)
 // LOCAL : 0221: MODULE_386 (type = 217)
-// char pGameTypesDes[34][5];
+// char pGameTypesDes[5][34];
 
 // GLOBAL: 0003:00000010 _personalities 004e9010 (bss)
 // LOCAL : 0000: MODULE_386 (type = 73)
