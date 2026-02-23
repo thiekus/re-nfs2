@@ -16,6 +16,8 @@ set(CMAKE_WATCOM_RUNTIME_LIBRARY "MultiThreaded")
 # -hd  : using DWARF debug format
 # -5r  : use Intel Pentium register-based calling conventions
 # -mf  : 32-bit flat memory model
+# Note that for unknown reasons, some cpp file cannot be compiled
+# with MS PDB/CodeView debug format.
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -w4 -e25 -zp1 -d2 -hd -5r -mf")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -w4 -e25 -zp1 -d2 -hd -5r -mf")
 
@@ -46,7 +48,7 @@ set_property(TARGET winmm PROPERTY
 # Linker options
 file(GLOB WINMM_LBC dllexports/winmm.lbc)
 # d all : expose all debug symbols possible
-# op m  : ?
+# op m  : generate mapfile
 set_target_properties(winmm PROPERTIES LINK_FLAGS
     "d all op m EXPORT=${WINMM_LBC}"
 )
