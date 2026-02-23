@@ -6,7 +6,7 @@
 struct Car_tObj{int fakeValue;};
 typedef struct Car_tObj Car_tObj;
 
-// GLOBAL: 0001:00027b18 Control_AI_ 00428b18 (code)
+// GLOBAL - 0001:00027b18 Control_AI_ 00428b18 (code)
 // LOCAL : 0008: NEAR_RTN_386 (return type 184) (none)
 // ARG 0 : 002A: LOCAL (type = 183) (EAX)
 GAME_FUNC void DEFAULT_CALL Control_AI(Car_tObj* carObj)
@@ -17,7 +17,7 @@ GAME_FUNC void DEFAULT_CALL Control_AI(Car_tObj* carObj)
     );
 }
 
-// GLOBAL: 0001:00027b42 Control_Human_ 00428b42 (code)
+// GLOBAL - 0001:00027b42 Control_Human_ 00428b42 (code)
 // LOCAL : 0036: NEAR_RTN_386 (return type = 184) (none)
 // ARG 0 : 005B: LOCAL (type = 183) (EAX)
 GAME_FUNC void DEFAULT_CALL Control_Human(Car_tObj* carObj)
