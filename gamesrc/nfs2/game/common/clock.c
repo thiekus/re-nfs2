@@ -19,28 +19,28 @@
 // int generic128HzClock;
 
 // GLOBAL: 0001:0002161b _Clock_InputThread 0042261b (code)
-// LOCAL : 0073: NEAR_RTN_386 (return type = 32)
+// LOCAL : 0073: NEAR_RTN_386 (return type = 32) (none)
 GAME_FUNC void __cdecl Clock_InputThread(void)
 {
     CALL_CDECL_VOID_0(0x0042261b);
 }
 
 // GLOBAL: 0001:0002164b Clock_MasterInterruptHandler_ 0042264b (code)
-// LOCAL : 0099: NEAR_RTN_386 (return type = 23)
+// LOCAL : 0099: NEAR_RTN_386 (return type = 23) (none)
 GAME_FUNC void DEFAULT_CALL Clock_MasterInterruptHandler(void)
 {
     CALL_WATCALL_VOID_0(0x0042264b);
 }
 
 // GLOBAL: 0001:000216a3 Clock_SystemStartUp_ 004226a3 (code)
-// LOCAL : 00CA: NEAR_RTN_386 (return type = 23)
+// LOCAL : 00CA: NEAR_RTN_386 (return type = 23) (none)
 GAME_FUNC void DEFAULT_CALL Clock_SystemStartUp(void)
 {
     CALL_WATCALL_VOID_0(0x004226a3);
 }
 
 // GLOBAL: 0001:0002170b Clock_SystemCleanUp_ 0042270b (code)
-// LOCAL : 00F2: NEAR_RTN_386 (return type = 65)
+// LOCAL : 00F2: NEAR_RTN_386 (return type = 65) (none)
 GAME_FUNC void DEFAULT_CALL Clock_SystemCleanUp()
 {
     CALL_WATCALL_VOID_0(0x0042270b);

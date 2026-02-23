@@ -23,7 +23,7 @@ typedef struct DRender_tFacet{int fakeValue;} DRender_tFacet;
 // DRender_tFacet3D gTestFacet;
 
 // GLOBAL: 0001:00028ea2 Debugren_TestFacet_ 00429ea2 (code)
-// LOCAL : 0057: NEAR_RTN_386 (return type = 86)
+// LOCAL : 0057: NEAR_RTN_386 (return type = 86) (none)
 // ARG 0 : 0086: LOCAL (type = 83) (EAX)
 // ARG 1 : 008D: LOCAL (type = 85) (EDX)
 // ARG 2 : 0096: LOCAL (type = 85) (EBX)

@@ -8,7 +8,7 @@ typedef struct coorddef{int fakeValue;} LIBCOORD;
 typedef struct matrixtdef{int fakeValue;} MATRIX3DT;
 
 // GLOBAL: 0001:0003a5d1 Quatern_Interpolate_ 0043b5d1 (code)
-// LOCAL : 0008: NEAR_RTN_386 (return type = 47)
+// LOCAL : 0008: NEAR_RTN_386 (return type = 47) (none)
 // ARG 0 : 0038: LOCAL (type = 42) (EAX)
 // ARG 1 : 003F: LOCAL (type = 42) (EDX)
 // ARG 2 : 0046: LOCAL (type = 46) (EBX)
@@ -27,7 +27,7 @@ GAME_FUNC void DEFAULT_CALL Quatern_Interpolate(Quatern_quat* q0, Quatern_quat* 
 }
 
 // GLOBAL: 0001:0003a75d Quatern_QuatToMat_ 0043b75d (code)
-// LOCAL : 007D: NEAR_RTN_386 (return type = 53)
+// LOCAL : 007D: NEAR_RTN_386 (return type = 53) (none)
 // ARG 0 : 00A7: LOCAL (type = 42)
 // ARG 1 : 00AD: LOCAL (type = 52)
 GAME_FUNC void DEFAULT_CALL Quatern_QuatToMat(Quatern_quat* q, MATRIX3DT* matrix)

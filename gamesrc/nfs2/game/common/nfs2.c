@@ -84,21 +84,21 @@
 // struct tTournament gSaveTournament_alloc;
 
 // GLOBAL: 0001:0002fded Nfs2_SystemNLibStartUp_ 00430ded (code)
-// LOCAL : 0221: NEAR_RTN_386 (return type = 23)
+// LOCAL : 0221: NEAR_RTN_386 (return type = 23) (none)
 GAME_FUNC void DEFAULT_CALL Nfs2_SystemNLibStartUp()
 {
     CALL_WATCALL_VOID_0(0x00430ded);
 }
 
 // GLOBAL: 0001:0002fe11 Nfs2_SystemNLibCleanUp_ 00430e11 (code)
-// LOCAL : 024C: NEAR_RTN_386 (return type = 23)
+// LOCAL : 024C: NEAR_RTN_386 (return type = 23) (none)
 GAME_FUNC void DEFAULT_CALL Nfs2_SystemNLibCleanUp()
 {
     CALL_WATCALL_VOID_0(0x00430e11);
 }
 
 // GLOBAL: 0001:0002fe30 Nfs2_BefuddleCode_ 00430e30 (code)
-// LOCAL : 0277: NEAR_RTN_386 (return type = 23)
+// LOCAL : 0277: NEAR_RTN_386 (return type = 23) (none)
 GAME_FUNC void DEFAULT_CALL Nfs2_BefuddleCode()
 {
     // int loop; // 029D: LOCAL (type = 9)
@@ -106,7 +106,7 @@ GAME_FUNC void DEFAULT_CALL Nfs2_BefuddleCode()
 }
 
 // GLOBAL: 0001:0002fe77 Nfs2_ChangeExtension_ 00430e77 (code)
-// LOCAL : 02A6: NEAR_RTN_386 (return type = 135)
+// LOCAL : 02A6: NEAR_RTN_386 (return type = 135) (none)
 // ARG 0 : 02D2: LOCAL (type = 13) (EAX)
 GAME_FUNC void DEFAULT_CALL Nfs2_ChangeExtension(char* ext)
 {
@@ -117,14 +117,14 @@ GAME_FUNC void DEFAULT_CALL Nfs2_ChangeExtension(char* ext)
 }
 
 // GLOBAL: 0001:0002fea2 Nfs2_ResetGame_ 00430ea2 (code)
-// LOCAL : 02DA: NEAR_RTN_386 (return type = 23)
+// LOCAL : 02DA: NEAR_RTN_386 (return type = 23) (none)
 GAME_FUNC void DEFAULT_CALL Nfs2_ResetGame()
 {
     CALL_WATCALL_VOID_0(0x00430ea2);
 }
 
 // GLOBAL: 0001:0002fed0 Nfs2_GameModuleStartUp_ 00430ed0 (code)
-// LOCAL : 02FD: NEAR_RTN_386 (return type = 137)
+// LOCAL : 02FD: NEAR_RTN_386 (return type = 137) (none)
 // ARG 0 : 032B: LOCAL (type = 136) (EAX)
 GAME_FUNC void DEFAULT_CALL Nfs2_GameModuleStartUp(int* FrontEndDataStream)
 {
@@ -135,7 +135,7 @@ GAME_FUNC void DEFAULT_CALL Nfs2_GameModuleStartUp(int* FrontEndDataStream)
 }
 
 // GLOBAL: 0001:00030009 Nfs2_CleanUpGameModule_ 00431009 (code)
-// LOCAL : 0343: NEAR_RTN_386 (return type = 23)
+// LOCAL : 0343: NEAR_RTN_386 (return type = 23) (none)
 GAME_FUNC void DEFAULT_CALL Nfs2_CleanUpGameModule()
 {
     // short k; // 036E: LOCAL (type = 7)
@@ -143,7 +143,7 @@ GAME_FUNC void DEFAULT_CALL Nfs2_CleanUpGameModule()
 }
 
 // GLOBAL: 0001:000300ea main_ 004310ea (code)
-// LOCAL : 0374: NEAR_RTN_386 (return type = 139)
+// LOCAL : 0374: NEAR_RTN_386 (return type = 139) (none)
 // ARG 0 : 0392: LOCAL (type = 9) (EAX)
 // ARG 1 : 039B: LOCAL (type = 138) (EDX)
 GAME_FUNC void DEFAULT_CALL main(int argc, char* argv[])
