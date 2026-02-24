@@ -16,6 +16,7 @@ typedef struct matrixtdef{int fakeValue;} MATRIX3DT;
 // ARG 4  - 0056: LOCAL (type = 9)
 // ARG 5  - 0061: LOCAL (type = 42)
 // ARG 6  - 0067: LOCAL (type = 42)
+// STUB: NFSW 0x0043b5d1
 GAME_FUNC void DEFAULT_CALL Quatern_Interpolate(Quatern_quat* q0, Quatern_quat* q1, LIBCOORD* cp0, LIBCOORD* cp1, int weight, Quatern_quat* q, LIBCOORD* cp)
 {
     // int one_weight; // 006E: LOCAL (type = 9)
@@ -30,6 +31,7 @@ GAME_FUNC void DEFAULT_CALL Quatern_Interpolate(Quatern_quat* q0, Quatern_quat* 
 // LOCAL  - 007D: NEAR_RTN_386 (return type = 53) (none)
 // ARG 0  - 00A7: LOCAL (type = 42)
 // ARG 1  - 00AD: LOCAL (type = 52)
+// STUB: NFSW 0x0043b75d
 GAME_FUNC void DEFAULT_CALL Quatern_QuatToMat(Quatern_quat* q, MATRIX3DT* matrix)
 {
     // int one; // 00B8: LOCAL (type = 9)
