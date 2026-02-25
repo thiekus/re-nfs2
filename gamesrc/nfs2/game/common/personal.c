@@ -75,6 +75,7 @@ GAME_FUNC void DEFAULT_CALL Personality_StartUp()
 GAME_FUNC int DEFAULT_CALL Personality_GetPersonalityIndex(int startingPosition, int pGameType)
 {
     // int personalityIndex; // 0182: LOCAL (type = 9)
+
     CALL_WATCALL_RESULT_2(int, 0x00431464,
         int startingPosition, int pGameType,
         startingPosition, pGameType

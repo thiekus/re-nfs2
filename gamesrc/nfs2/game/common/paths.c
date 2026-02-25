@@ -44,6 +44,7 @@ GAME_FUNC void DEFAULT_CALL Paths_StartUp(void)
     // char* scan; // 00B0: LOCAL (type = 13)
     // char* end; // 00B9: LOCAL (type = 13)
     // int dirCounter; // 00C1: LOCAL (type = 9)
+
     CALL_WATCALL_VOID_0(0x004312e1);
 }
 

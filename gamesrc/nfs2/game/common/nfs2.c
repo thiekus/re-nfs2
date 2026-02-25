@@ -126,6 +126,7 @@ GAME_FUNC void DEFAULT_CALL Nfs2_SystemNLibCleanUp()
 GAME_FUNC void DEFAULT_CALL Nfs2_BefuddleCode()
 {
     // int loop; // 029D: LOCAL (type = 9)
+
     CALL_WATCALL_VOID_0(0x00430e30);
 }
 
@@ -167,6 +168,7 @@ GAME_FUNC void DEFAULT_CALL Nfs2_GameModuleStartUp(int* FrontEndDataStream)
 GAME_FUNC void DEFAULT_CALL Nfs2_CleanUpGameModule()
 {
     // short k; // 036E: LOCAL (type = 7)
+
     CALL_WATCALL_VOID_0(0x00431009);
 }
 

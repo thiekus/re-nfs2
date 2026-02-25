@@ -57,12 +57,6 @@ GAME_FUNC void DEFAULT_CALL GetAngleWind(DRender_tISouffle* is)
 // STUB: NFSW 0x00445a58
 GAME_FUNC void DEFAULT_CALL MoveAngleWind(DRender_tISouffle* is)
 {
-    // 00D2: BLOCK_386
-    // int i; // 00DE: LOCAL (type = 9)
-    // int maxc; // 00E4: LOCAL (type = 9)
-    // 00ED: BLOCK_386
-    // LIBCOORD vempty; // 00F9: LOCAL (type = 46)
-    // DRender_tISouffle* is; // 0104: LOCAL (type = 62)
     CALL_WATCALL_VOID_1(0x00445a58,
         DRender_tISouffle* is,
         is
@@ -78,8 +72,15 @@ GAME_FUNC void DEFAULT_CALL MoveAngleWind(DRender_tISouffle* is)
 GAME_FUNC DRender_tISouffle* DEFAULT_CALL Souffle_Add(LIBCOORD* soufflept, int type, LIBCOORD* vec)
 {
     // int inserti; // 0151: LOCAL (type = 9)
-    // 015D: BLOCK_386
-    // DRender_tISouffle* is; // 0169: LOCAL (type = 62)
+
+    // 00D2: BLOCK_386 (parent = 010B) (addr = 00445AC3)
+    // int i; // 00DE: LOCAL (type = 9)
+    // int maxc; // 00E4: LOCAL (type = 9)
+
+    // 00ED: BLOCK_386 (parent = 010B) (addr = 00445B20)
+    // LIBCOORD vempty; // 00F9: LOCAL (type = 46)
+    // DRender_tISouffle* is; // 0104: LOCAL (type = 62)
+
     CALL_WATCALL_RESULT_3(DRender_tISouffle*, 0x00445a9e,
         LIBCOORD* soufflept, int type, LIBCOORD* vec,
         soufflept, type, vec
@@ -93,8 +94,10 @@ GAME_FUNC void DEFAULT_CALL Souffle_DoSouffle(void)
 {
     // LIBCOORD w; // 0196: LOCAL (type = 46)
     // int i; // 019C: LOCAL (type = 9)
-    // 01A2: BLOCK_386
-    // DRender_tISouffle* is; // 01AE: LOCAL (type = 62)
+
+    // 015D: BLOCK_386 (parent = 0170) (addr = 00445CFC)
+    // DRender_tISouffle* is; // 0169: LOCAL (type = 62)
+
     CALL_WATCALL_VOID_0(0x00445c24);
 }
 
@@ -105,6 +108,10 @@ GAME_FUNC void DEFAULT_CALL Souffle_DoSouffle(void)
 GAME_FUNC void DEFAULT_CALL Souffle_InsertFacet(DRender_tView* Vi)
 {
     // int i; // 01E6: LOCAL (type = 9)
+
+    // 01A2: BLOCK_386 (parent = 01B5) (addr = 00445E28)
+    // DRender_tISouffle* is; // 01AE: LOCAL (type = 62)
+
     CALL_WATCALL_VOID_1(0x00445dec,
         DRender_tView* Vi,
         Vi

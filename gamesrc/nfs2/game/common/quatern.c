@@ -47,6 +47,7 @@ GAME_FUNC void DEFAULT_CALL Quatern_QuatToMat(Quatern_quat* q, MATRIX3DT* matrix
     // int yy; // 00FC: LOCAL (type = 9)
     // int yz; // 0103: LOCAL (type = 9)
     // int zz; // 010A: LOCAL (type = 9)
+
     CALL_WATCALL_VOID_2(0x0043b75d,
         Quatern_quat* q, MATRIX3DT* matrix,
         q, matrix

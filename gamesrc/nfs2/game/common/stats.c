@@ -18,6 +18,7 @@ GAME_FUNC void DEFAULT_CALL Stats_DoPlayerGlue(void)
     // int i; // 004A: LOCAL (type = 9)
     // int dist; // 0050: LOCAL (type = 9)
     // int humanLeader; // 0059: LOCAL (type = 9)
+
     CALL_WATCALL_VOID_0(0x00446366);
 }
 
@@ -27,6 +28,7 @@ GAME_FUNC void DEFAULT_CALL Stats_DoPlayerGlue(void)
 GAME_FUNC void DEFAULT_CALL Stats_ClearPosition(void)
 {
     // int i; // 0091: LOCAL (type = 9)
+
     CALL_WATCALL_VOID_0(0x0044656a);
 }
 
@@ -39,6 +41,7 @@ GAME_FUNC int DEFAULT_CALL Stats_GetPosition(Car_tObj* carObj)
     // int i; // 00CD: LOCAL (type = 9)
     // int position; // 00D3: LOCAL (type = 9)
     // int carindex; // 00E0: LOCAL (type = 9)
+
     CALL_WATCALL_RESULT_1(int, 0x004465da,
         Car_tObj* carObj,
         carObj
@@ -52,6 +55,7 @@ GAME_FUNC int DEFAULT_CALL Stats_GetNumOpponents(void)
 {
     // int i; // 0119: LOCAL (type = 9)
     // int numCars; // 011F: LOCAL (type = 9)
+
     CALL_WATCALL_RESULT_0(int, 0x00446646);
 }
 
@@ -61,21 +65,6 @@ GAME_FUNC int DEFAULT_CALL Stats_GetNumOpponents(void)
 // STUB: NFSW 0x0044669d
 GAME_FUNC Car_tObj* DEFAULT_CALL Stats_GetNextCar(int position)
 {
-    // 0161: BLOCK_386
-    // int r0; // 016D: LOCAL (type = 9)
-    // int r1; // 0174: LOCAL (type = 9)
-    // int r2; // 017B: LOCAL (type = 9)
-    // int r3; // 0182: LOCAL (type = 9)
-    // int r4; // 0189: LOCAL (type = 9)
-    // 0190: BLOCK_386
-    // int r1; // 019C: LOCAL (type = 9)
-    // int r2; // 01A3: LOCAL
-    // int r3; // 01AA: LOCAL
-    // int r4; // 01B1: LOCAL
-    // 01B8: BLOCK_386
-    // int j; // 01C4: LOCAL
-    // 01CA: BLOCK_386
-    // int i; // 01D6: LOCAL
     CALL_WATCALL_RESULT_1(Car_tObj*, 0x0044669d,
         int position,
         position
@@ -88,6 +77,25 @@ GAME_FUNC Car_tObj* DEFAULT_CALL Stats_GetNextCar(int position)
 // STUB: NFSW 0x004466e1
 GAME_FUNC void DEFAULT_CALL Stats_TrackStats(Car_tObj* carObj)
 {
+    // 01CA: BLOCK_386 (parent = 01DC) (addr = 00446994)
+    // int i; // 01D6: LOCAL
+
+    // 01B8: BLOCK_386 (parent = 01CA) (addr = 00446A0F)
+    // int j; // 01C4: LOCAL
+
+    // 0161: BLOCK_386 (parent = 01B8) (addr = 00446A2F)
+    // int r0; // 016D: LOCAL (type = 9)
+    // int r1; // 0174: LOCAL (type = 9)
+    // int r2; // 017B: LOCAL (type = 9)
+    // int r3; // 0182: LOCAL (type = 9)
+    // int r4; // 0189: LOCAL (type = 9)
+
+    // 0190: BLOCK_386 (parent = 01B8) (addr = 00446AB3)
+    // int r1; // 019C: LOCAL (type = 9)
+    // int r2; // 01A3: LOCAL
+    // int r3; // 01AA: LOCAL
+    // int r4; // 01B1: LOCAL
+
     CALL_WATCALL_VOID_1(0x004466e1,
         Car_tObj* carObj,
         carObj
@@ -103,6 +111,7 @@ GAME_FUNC void DEFAULT_CALL Stats_ExtrapolateOpponentTimes(int type)
     // int i; // 024F: LOCAL (type = 9)
     // int extrapolatedTime; // 0255: LOCAL (type = 9)
     // int bAllHumansHaveFinished; // 026A: LOCAL (type = 9)
+
     CALL_WATCALL_VOID_1(0x00446b37,
         int type,
         type
@@ -117,5 +126,6 @@ GAME_FUNC void DEFAULT_CALL Stats_TrackEndGame(void)
     // int i; // 02AC: LOCAL (type = 9)
     // int numKnockOutPlayers; // 02B2: LOCAL (type = 9)
     // int Stats_PlayersFinishedRace; // 02C9: LOCAL (type = 9)
+
     CALL_WATCALL_VOID_0(0x00446e78);
 }

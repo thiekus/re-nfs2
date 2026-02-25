@@ -150,6 +150,7 @@ GAME_FUNC int DEFAULT_CALL AI_GetBestLane(int slice)
 {
     // int modSlice; // 0271: LOCAL (type = 9)
     // int modLane; // 027E: LOCAL (type = 9)
+
     CALL_WATCALL_RESULT_1(int, 0x004010e0,
         int slice,
         slice
@@ -194,8 +195,6 @@ GAME_FUNC int DEFAULT_CALL AI_GetDriveSide(void)
 // STUB: NFSW 0x00401248
 GAME_FUNC void DEFAULT_CALL AI_ProcessBarrierCollision(Car_tObj* pCar)
 {
-    // 0368: BLOCK_386
-    // Car_tObj* otherCar; // 0374: LOCAL (type = 202)
     CALL_WATCALL_VOID_1(0x00401248,
         Car_tObj* pCar,
         pCar
@@ -208,6 +207,9 @@ GAME_FUNC void DEFAULT_CALL AI_ProcessBarrierCollision(Car_tObj* pCar)
 // STUB: NFSW 0x004012af
 GAME_FUNC void DEFAULT_CALL AI_ProcessCollision(Car_tObj* pCar)
 {
+    // 0368: BLOCK_386 (parent = 0382) (addr = 004012DD)
+    // Car_tObj* otherCar; // 0374: LOCAL (type = 202)
+
     CALL_WATCALL_VOID_1(0x004012af,
         Car_tObj* pCar,
         pCar
@@ -223,6 +225,7 @@ GAME_FUNC void DEFAULT_CALL AI_PickNewLane(Car_tObj* theCar)
     // int adaptedSlice; // 03E9: LOCAL (type = 9)
     // int randval; // 03FA: LOCAL (type = 9)
     // int range; // 0406: LOCAL (type = 9)
+
     CALL_WATCALL_VOID_1(0x004013e8,
         Car_tObj* theCar,
         theCar
@@ -236,6 +239,7 @@ GAME_FUNC void DEFAULT_CALL AI_PickNewLane(Car_tObj* theCar)
 GAME_FUNC void DEFAULT_CALL AI_CalcLaneSlack(Car_tObj* theCar)
 {
     // int randval; // 0444: LOCAL (type = 9)
+
     CALL_WATCALL_VOID_1(0x00401582,
         Car_tObj* theCar,
         theCar
@@ -264,6 +268,7 @@ GAME_FUNC int DEFAULT_CALL AI_ParallelDistance(Car_tObj* mo, Car_tObj* to)
 {
     // LIBCOORD relPos; // 04DF: LOCAL (type = 83)
     // LIBCOORD forward; // 04EA: LOCAL (type = 83)
+
     CALL_WATCALL_RESULT_2(int, 0x00401669,
         Car_tObj* mo, Car_tObj* to,
         mo, to
@@ -279,6 +284,7 @@ GAME_FUNC int DEFAULT_CALL AI_SliceDistance(int a, int b)
 {
     // int diff; // 052D: LOCAL (type = 9)
     // int halfTrack; // 0536: LOCAL (type = 9)
+
     CALL_WATCALL_RESULT_2(int, 0x004016fc,
         int a, int b,
         a, b
@@ -295,6 +301,7 @@ GAME_FUNC int DEFAULT_CALL AI_IsDriveableLane(int slice, int laneIndex)
     // int profileIndex; // 0589: LOCAL (type = 9)
     // int laneOffset; // 059A: LOCAL (type = 9)
     // int mask; // 05A9: LOCAL (type = 9)
+
     CALL_WATCALL_RESULT_2(int, 0x00401772,
         int slice, int laneIndex,
         slice, laneIndex
@@ -309,6 +316,7 @@ GAME_FUNC int DEFAULT_CALL AI_GetProfileMask(int laneIndex)
 {
     // int profileIndex; // 05EA: LOCAL (type = 9)
     // int laneOffset; // 05FB: LOCAL (type = 9)
+
     CALL_WATCALL_RESULT_1(int, 0x004017ee,
         int laneIndex,
         laneIndex
@@ -339,6 +347,7 @@ GAME_FUNC int DEFAULT_CALL AI_LaneIndex(int slice, int position)
     // int inverseLaneWidth; // 06A0: LOCAL (type = 9)
     // int perpDistance; // 06B5: LOCAL (type = 9)
     // int li; // 06C6: LOCAL (type = 9)
+
     CALL_WATCALL_RESULT_2(int, 0x00401887,
         int slice, int position,
         slice, position
@@ -353,6 +362,7 @@ GAME_FUNC void DEFAULT_CALL AI_PutCarOnShoulder(Car_tObj* theCar)
 {
     // int rightShoulder; // 0706: LOCAL (type = 9)
     // LIBCOORD offset; // 0718: LOCAL (type = 83)
+
     CALL_WATCALL_VOID_1(0x0040196f,
         Car_tObj* theCar,
         theCar
@@ -366,6 +376,7 @@ GAME_FUNC void DEFAULT_CALL AI_PutCarOnShoulder(Car_tObj* theCar)
 GAME_FUNC int DEFAULT_CALL AI_IsNonStandardCarFile(int index)
 {
     // int nonStandardList[37]; // 075D: LOCAL (type = 224)
+
     CALL_WATCALL_RESULT_1(int, 0x00401a6e,
         int index,
         index
@@ -378,6 +389,7 @@ GAME_FUNC int DEFAULT_CALL AI_IsNonStandardCarFile(int index)
 GAME_FUNC int DEFAULT_CALL AI_FigureOutPersonalityGameType()
 {
     // pGameTypes_t pGameType; // 07A9: LOCAL (type = 228)
+
     CALL_WATCALL_RESULT_0(int, 0x00401abc);
 }
 
@@ -392,6 +404,7 @@ GAME_FUNC void DEFAULT_CALL AI_LoadGlueFactor(Udff_tHandle handle)
     // int glue[2]; // 0805: LOCAL (type = 254)
     // int lapIndex; // 080F: LOCAL (type = 9)
     // int glueType; // 081C: LOCAL (type = 9)
+
     CALL_WATCALL_VOID_1(0x00401b25,
         Udff_tHandle handle,
         handle
@@ -407,6 +420,7 @@ GAME_FUNC void DEFAULT_CALL AI_LoadPhysicsConfig(Udff_tHandle handle)
     // AIPhysic_ModelConfig_t* model; // 0861: LOCAL (type = 255)
     // int loop; // 086C: LOCAL (type = 9)
     // int throwAway; // 0875: LOCAL (type = 9)
+
     CALL_WATCALL_VOID_1(0x00401d31,
         Udff_tHandle handle,
         handle
@@ -422,6 +436,7 @@ GAME_FUNC void DEFAULT_CALL AI_LoadAIConfig(Udff_tHandle handle)
     // int adjustloop; // 08B6: LOCAL (type = 9)
     // int laneloop; // 08C5: LOCAL (type = 9)
     // int doprint; // 08D2: LOCAL (type = 9)
+
     CALL_WATCALL_VOID_1(0x00401ebd,
         Udff_tHandle handle,
         handle
@@ -435,8 +450,7 @@ GAME_FUNC void AI_LoadConfigs(void)
 {
     // Udff_tHandle handle; // 0901: LOCAL (type = 236)
     // char pathname[100]; // 090D: LOCAL (type = 256)
-    // 091B: BLOCK_386
-    // LIBCOORD trafficOffset; // 0927: LOCAL (type = 83)
+
     CALL_WATCALL_VOID_0(0x00401f7b);
 }
 
@@ -446,6 +460,9 @@ GAME_FUNC void AI_LoadConfigs(void)
 // STUB: NFSW 0x00401fde
 GAME_FUNC void DEFAULT_CALL AI_RestartAICar(Car_tObj* mo)
 {
+    // 091B: BLOCK_386 (parent = 0939) (addr = 0040213E)
+    // LIBCOORD trafficOffset; // 0927: LOCAL (type = 83)
+
     CALL_WATCALL_VOID_1(0x00401fde,
         Car_tObj* mo,
         mo
@@ -463,6 +480,7 @@ GAME_FUNC void DEFAULT_CALL AI_InitAICar(Car_tObj* mo, Udff_tHandle handle)
     // int gearLoop; // 09B5: LOCAL (type = 9)
     // tAccTable accelTableThrowAway; // 09C2: LOCAL (type = 59)
     // int intThrowAway; // 09DB: LOCAL (type = 9)
+
     CALL_WATCALL_VOID_2(0x00402169,
         Car_tObj* mo, Udff_tHandle handle,
         mo, handle
@@ -491,6 +509,7 @@ GAME_FUNC void AI_CleanUp2(void)
 GAME_FUNC void AI_StartUp1(void)
 {
     // int i; // 0A4C: LOCAL (type = 9)
+
     CALL_WATCALL_VOID_0(0x00402454);
 }
 
@@ -507,8 +526,6 @@ GAME_FUNC void AI_Reset1(void)
 // STUB: NFSW 0x0040251c
 GAME_FUNC void AI_StartUp2(void)
 {
-    // 0A90: BLOCK_386
-    // int carIndex; // 0A9C: LOCAL (type = 9)
     CALL_WATCALL_VOID_0(0x0040251c);
 }
 
@@ -520,6 +537,10 @@ GAME_FUNC void AI_Reset2(void)
     // int aiRacerLoop; // 0AC7: LOCAL (type = 9)
     // int pgt; // 0AD7: LOCAL (type = 9)
     // int i; // 0ADF: LOCAL (type = 9)
+
+    // 0A90: BLOCK_386 (parent = 0AA9) (addr = 004025C7)
+    // int carIndex; // 0A9C: LOCAL (type = 9)
+
     CALL_WATCALL_VOID_0(0x00402545);
 }
 
@@ -529,8 +550,6 @@ GAME_FUNC void AI_Reset2(void)
 // STUB: NFSW 0x0040274b
 GAME_FUNC void DEFAULT_CALL AI_CleanUpCollidedCar(Car_tObj* theCar)
 {
-    // 0B1E: BLOCK_386
-    // int outOfView; // 0B2A: LOCAL (type = 9)
     CALL_WATCALL_VOID_1(0x0040274b,
         Car_tObj* theCar,
         theCar
@@ -540,10 +559,14 @@ GAME_FUNC void DEFAULT_CALL AI_CleanUpCollidedCar(Car_tObj* theCar)
 // GLOBAL - 0001:000017be CleanUpAllDeadCars_ 004027be (code)
 // LOCAL  - 0B38: NEAR_RTN_386 (return type = 23) (none)
 // STUB: NFSW 0x004027be
-GAME_FUNC void CleanUpAllDeadCars(void)
+GAME_FUNC void DEFAULT_CALL CleanUpAllDeadCars(void)
 {
     // Car_tObj* mo; // 0B5F: LOCAL (type = 202)
     // int aiCarLoop; // 0B67: LOCAL (type = 9)
+
+    // 0B1E: BLOCK_386 (parent = 0B38) (addr = 004027E8)
+    // int outOfView; // 0B2A: LOCAL (type = 9)
+
     CALL_WATCALL_VOID_0(0x004027be);
 }
 
@@ -554,11 +577,7 @@ GAME_FUNC void CleanUpAllDeadCars(void)
 GAME_FUNC void DEFAULT_CALL AI_ReInit_SetSpeeds(Car_tObj* theCar)
 {
     // int basisCarSpeed; // 0BAC: LOCAL (type = 9)
-    // 0BBE: BLOCK_386
-    // LIBCOORD basisOuterCoord; // 0BCA: LOCAL (type = 83)
-    // int basisOuterSlice; // 0BDE: LOCAL (type = 9)
-    // 0BF2: BLOCK_386
-    // Car_tObj* checkCar; // 0BFE: LOCAL (type = 202)
+
     CALL_WATCALL_VOID_1(0x004028ec,
         Car_tObj* theCar,
         theCar
@@ -575,6 +594,14 @@ GAME_FUNC void DEFAULT_CALL AI_ReInit_PickSliceAndDirection(Car_tObj* theCar)
     // int search; // 0C57: LOCAL (type = 9)
     // int count; // 0C62: LOCAL (type = 9)
     // int offset; // 0C6C: LOCAL (type = 9)
+
+    // 0BF2: BLOCK_386 (parent = 0C0C) (addr = 00402A8F)
+    // Car_tObj* checkCar; // 0BFE: LOCAL (type = 202)
+
+    // 0BBE: BLOCK_386 (parent = 0BF2) (addr = 0x402AC8)
+    // LIBCOORD basisOuterCoord; // 0BCA: LOCAL (type = 83)
+    // int basisOuterSlice; // 0BDE: LOCAL (type = 9)
+
     CALL_WATCALL_VOID_1(0x004029b2,
         Car_tObj* theCar,
         theCar
@@ -600,14 +627,7 @@ GAME_FUNC void DEFAULT_CALL AI_ReInitWith(Car_tObj* theCar)
 GAME_FUNC void DEFAULT_CALL AI_MoveCarToPurgatory(Car_tObj* theCar)
 {
     // LIBCOORD stop; // 0CE1: LOCAL (type = 83)
-    // 0CEA: BLOCK_386
-    // int randNumLanes; // 0CF6: LOCAL (type = 9)
-    // int newSlice; // 0D07: LOCAL (type = 9)
-    // int width; // 0D14: LOCAL (type = 9)
-    // 0D1E: BLOCK_386
-    // int randNumLanes; // 0D2A: LOCAL (type = 9)
-    // int newSlice; // 0D3B: LOCAL (type = 9)
-    // int width; // 0D48: LOCAL (type = 9)
+
     CALL_WATCALL_VOID_1(0x00402c9e,
         Car_tObj* theCar,
         theCar
@@ -623,6 +643,17 @@ GAME_FUNC void DEFAULT_CALL AI_ReInit(Car_tObj* theCar)
     // LIBCOORD offset; // 0D7F: LOCAL (type = 83)
     // LIBCOORD targetDirection; // 0D8A: LOCAL (type = 83)
     // int speed; // 0D9E: LOCAL (type = 9)
+
+    // 0CEA: BLOCK_386 (parent = 0D52) (addr = 00402DF8)
+    // int randNumLanes; // 0CF6: LOCAL (type = 9)
+    // int newSlice; // 0D07: LOCAL (type = 9)
+    // int width; // 0D14: LOCAL (type = 9)
+
+    // 0D1E: BLOCK_386 (parent = 0D52) (addr = 00402E8E)
+    // int randNumLanes; // 0D2A: LOCAL (type = 9)
+    // int newSlice; // 0D3B: LOCAL (type = 9)
+    // int width; // 0D48: LOCAL (type = 9)
+
     CALL_WATCALL_VOID_1(0x00402da5,
         Car_tObj* theCar,
         theCar
@@ -640,6 +671,7 @@ GAME_FUNC int DEFAULT_CALL AI_IsCoordInThisLiveArea(LIBCOORD* tPos, Car_tObj* ra
     // int xD; // 0DFA: LOCAL (type = 9)
     // int zD; // 0E01: LOCAL (type = 9)
     // int dist; // 0E08: LOCAL
+
     CALL_WATCALL_RESULT_2(int, 0x00403090,
         LIBCOORD* tPos, Car_tObj* racer,
         tPos, racer
@@ -654,6 +686,7 @@ GAME_FUNC int DEFAULT_CALL AI_IsTrafficCarInAnyLiveArea(Car_tObj* traffic)
 {
     // int racerLoop; // 0E53: LOCAL (type = 9)
     // LIBCOORD* tPos; // 0E61: LOCAL (type = 258)
+
     CALL_WATCALL_RESULT_1(int, 0x00403154,
         Car_tObj* traffic,
         traffic
@@ -671,6 +704,7 @@ GAME_FUNC int DEFAULT_CALL AI_IsCoordInThisVisibleArea(LIBCOORD* tPos, Car_tObj*
     // int xD; // 0EC0: LOCAL (type = 9)
     // int zD; // 0EC7: LOCAL (type = 9)
     // int dist; // 0ECE: LOCAL (type = 9)
+
     CALL_WATCALL_RESULT_2(int, 0x004031c2,
         LIBCOORD* tPos, Car_tObj* racer,
         tPos, racer
@@ -685,16 +719,7 @@ GAME_FUNC int DEFAULT_CALL AI_IsTrafficCarInAnyVisibleArea(Car_tObj* traffic)
 {
     // int racerLoop; // 0F1C: LOCAL (type = 9)
     // LIBCOORD* tPos; // 0F2A: LOCAL (type = 258)
-    // 0F34: BLOCK_386
-    // Car_tObj* test; // 0F40: LOCAL (type = 202)
-    // 0F4A: BLOCK_386
-    // Car_tObj* test; // 0F56: LOCAL (type = 202)
-    // 0F60: BLOCK_386
-    // Car_tObj* found; // 0F6C: LOCAL (type = 202)
-    // int search; // 0F77: LOCAL (type = 9)
-    // int count; // 0F82: LOCAL (type = 9)
-    // Car_tObj* lastBasisCar; // 0F8C: LOCAL (type = 202)
-    // int wrapAround; // 0F9E: LOCAL (type = 9)
+
     CALL_WATCALL_RESULT_1(int, 0x00403286,
         Car_tObj* traffic,
         traffic
@@ -707,6 +732,19 @@ GAME_FUNC int DEFAULT_CALL AI_IsTrafficCarInAnyVisibleArea(Car_tObj* traffic)
 // STUB: NFSW 0x004032f4
 GAME_FUNC void DEFAULT_CALL AI_EvaluateLife(Car_tObj* theCar)
 {
+    // 0F60: BLOCK_386 (parent = 0FAD) (addr = 00403350)
+    // Car_tObj* found; // 0F6C: LOCAL (type = 202)
+    // int search; // 0F77: LOCAL (type = 9)
+    // int count; // 0F82: LOCAL (type = 9)
+    // Car_tObj* lastBasisCar; // 0F8C: LOCAL (type = 202)
+    // int wrapAround; // 0F9E: LOCAL (type = 9)
+
+    // 0F34: BLOCK_386 (parent = 0F60) (addr = 004033DF)
+    // Car_tObj* test; // 0F40: LOCAL (type = 202)
+
+    // 0F4A: BLOCK_386 (parent = 0F60) (addr = 004034BC)
+    // Car_tObj* test; // 0F56: LOCAL (type = 202)
+
     CALL_WATCALL_VOID_1(0x004032f4,
         Car_tObj* theCar,
         theCar
@@ -722,6 +760,7 @@ GAME_FUNC void DEFAULT_CALL AI_CalcBestLineMerits(Car_tObj* mo)
     // int lookahead; // 1015: LOCAL (type = 9)
     // int slice; // 1023: LOCAL (type = 9)
     // int bestLane; // 102D: LOCAL (type = 9)
+
     CALL_WATCALL_VOID_1(0x0040367b,
         Car_tObj* mo,
         mo
@@ -738,6 +777,7 @@ GAME_FUNC void DEFAULT_CALL AI_CalcMeritsBasedOnSpeed(Car_tObj* mo)
     // int speed; // 1079: LOCAL (type = 9)
     // int cSpeed; // 1083: LOCAL (type = 9)
     // int considerDesired; // 108E: LOCAL (type = 9)
+
     CALL_WATCALL_VOID_1(0x004037aa,
         Car_tObj* mo,
         mo
@@ -754,6 +794,7 @@ GAME_FUNC int DEFAULT_CALL AI_IsMellowZone(Car_tObj* mo, int delay)
     // int index; // 10DE: LOCAL (type = 9)
     // int tSlice; // 10E8: LOCAL (type = 9)
     // int endMellow; // 10F3: LOCAL (type = 9)
+
     CALL_WATCALL_RESULT_2(int, 0x00403aba,
         Car_tObj* mo, int delay,
         mo, delay
@@ -796,6 +837,7 @@ GAME_FUNC void DEFAULT_CALL AI_OpponentBlockPlayer(Car_tObj* mo, Car_tObj* to, i
     // int moSlice; // 11CE: LOCAL (type = 9)
     // int toSlice; // 11DA: LOCAL (type = 9)
     // int distance; // 11E6: LOCAL (type = 9)
+
     CALL_WATCALL_VOID_3(0x00403c82,
         Car_tObj* mo, Car_tObj* to, int toLaneIndex,
         mo, to, toLaneIndex
@@ -803,12 +845,150 @@ GAME_FUNC void DEFAULT_CALL AI_OpponentBlockPlayer(Car_tObj* mo, Car_tObj* to, i
 }
 
 // GLOBAL - 0001:00002e0b AI_HonkWhenTailgaiting_ 00403e0b (code)
+// LOCAL  - 123D: NEAR_RTN_386 (return type = 262) (none) (params?)
+// ARG 0  - 126F: LOCAL (type = 202) (EAX)
+// ARG 1  - 1277: LOCAL (type = 202) (EDX)
+// ARG 2  - 127F: LOCAL (type = 9) (EBX)
+// STUB: NFSW 0x00403e0b
+GAME_FUNC void DEFAULT_CALL AI_HonkWhenTailgaiting(Car_tObj* mo, Car_tObj* to, int toLaneIndex)
+{
+    // int sliceDiff; // 128F: LOCAL (type = 9)
+
+    CALL_WATCALL_VOID_3(0x00403e0b,
+        Car_tObj* mo, Car_tObj* to, int toLaneIndex,
+        mo, to, toLaneIndex
+    );
+}
+
 // GLOBAL - 0001:00002f31 AI_OpponentUpCloseCode_ 00403f31 (code)
+// LOCAL  - 12B1: NEAR_RTN_386 (return type = 220) (none)
+// ARG 0  - 12DF: LOCAL (type = 202) (EAX)
+// STUB: NFSW 0x00403f31
+GAME_FUNC void DEFAULT_CALL AI_OpponentUpCloseCode(Car_tObj* mo)
+{
+    // int t; // 12E7: LOCAL (type = 9)
+
+    // 129D: BLOCK_386 (parent = 12B1) (addr = 00403F61)
+    // Car_tObj* to; // 12A9: LOCAL (type = 202)
+
+    CALL_WATCALL_VOID_1(0x00403f31,
+        Car_tObj* mo,
+        mo
+    );
+}
+
 // GLOBAL - 0001:00002fd3 AI_OpponentSpecialCase_ 00403fd3 (code)
+// LOCAL  - 12ED: NEAR_RTN_386 (return type = 220) (none)
+// ARG 0  - 131B: LOCAL (type = 202) (EAX)
+// STUB: NFSW 0x00403fd3
+GAME_FUNC void DEFAULT_CALL AI_OpponentSpecialCase(Car_tObj* mo)
+{
+    CALL_WATCALL_VOID_1(0x00403fd3,
+        Car_tObj* mo,
+        mo
+    );
+}
+
 // GLOBAL - 0001:00002ff5 AI_CheckForCarsInWay_ 00403ff5 (code)
+// LOCAL  - 1323: NEAR_RTN_386 (return type = 220) (none)
+// ARG 0  - 134F: LOCAL (type = 202) (EAX)
+// STUB: NFSW 0x00403ff5
+GAME_FUNC void DEFAULT_CALL AI_CheckForCarsInWay(Car_tObj* mo)
+{
+    // Car_tObj* to; // 1357: LOCAL (type = 202)
+    // int ci; // 135F: LOCAL (type = 9)
+    // int distance; // 1366: LOCAL (type = 9)
+    // int blockDistance; // 1373: LOCAL (type = 9)
+
+    CALL_WATCALL_VOID_1(0x00403ff5,
+        Car_tObj* mo,
+        mo
+    );
+}
+
 // GLOBAL - 0001:00003134 AI_CheckForSmackables_ 00404134 (code)
+// LOCAL  - 13C0: NEAR_RTN_386 (return type = 220) (none)
+// ARG 0  - 13ED: LOCAL (type = 202) (EAX)
+// STUB: NFSW 0x00404134
+GAME_FUNC void DEFAULT_CALL AI_CheckForSmackables(Car_tObj* mo)
+{
+    // int i; // 13F5: LOCAL (type = 9)
+    // int distance; // 13FB: LOCAL (type = 9)
+    // int dir; // 1408: LOCAL (type = 9)
+    // Car_tObj* smk; // 1410: LOCAL (type = 202)
+    // int speed; // 1419: LOCAL (type = 9)
+    // int smackSpeed; // 1423: LOCAL (type = 9)
+
+    // 1385: BLOCK_386 (parent = 13C0) (addr = 00404192)
+    // int smackPosition; // 1391: LOCAL (type = 9)
+    // int smackLane; // 13A3: LOCAL (type = 9)
+    // int smackMerit; // 13B1: LOCAL (type = 9)
+
+    CALL_WATCALL_VOID_1(0x00404134,
+        Car_tObj* mo,
+        mo
+    );
+}
+
 // GLOBAL - 0001:000032da AI_CheckForClearLanes_ 004042da (code)
+// LOCAL  - 1432: NEAR_RTN_386 (return type = 220) (none)
+// ARG 0  - 145F: LOCAL (type = 202) (EAX)
+// STUB: NFSW 0x004042da
+GAME_FUNC void DEFAULT_CALL AI_CheckForClearLanes(Car_tObj* mo)
+{
+    // int lanesFilled; // 1467: LOCAL (type = 9)
+    // int toIndexInSortedList; // 1477: LOCAL (type = 9)
+    // int toIndex; // 148F: LOCAL (type = 9)
+    // int distance; // 149B: LOCAL (type = 9)
+    // int dir; // 14A8: LOCAL (type = 9)
+    // int carsFound; // 14B0: LOCAL (type = 9)
+    // int ci; // 14BE: LOCAL (type = 9)
+    // Car_tObj* to; // 14C5: LOCAL (type = 202)
+    // int moIndexInSortedList; // 14CD: LOCAL (type = 9)
+
+    CALL_WATCALL_VOID_1(0x004042da,
+        Car_tObj* mo,
+        mo
+    );
+}
+
 // GLOBAL - 0001:00003587 AI_CalculateLaneSpeeds_ 00404587 (code)
+// LOCAL  - 15CF: NEAR_RTN_386 (return type = 220) (none)
+// ARG 0  - 15FD: LOCAL (type = 202) (EAX)
+// STUB: NFSW 0x00404587
+GAME_FUNC void DEFAULT_CALL AI_CalculateLaneSpeeds(Car_tObj* mo)
+{
+    // Car_tObj* to; // 1605: LOCAL (type = 202)
+    // int carsfound; // 160D: LOCAL (type = 9)
+    // int ci; // 161B: LOCAL (type = 9)
+    // int lanesFilled; // 1622: LOCAL (type = 9)
+    // int moIndexInSortedList; // 1632: LOCAL (type = 9)
+
+    // 1503: BLOCK_386 (parent = 15CF) (addr = 00404636)
+    // int distance; // 150F: LOCAL (type = 9)
+    // int lane_look_ahead; // 151C: LOCAL (type = 9)
+    // int toIndexInSortedList; // 1530: LOCAL (type = 9)
+    // int toIndex; // 1548: LOCAL (type = 9)
+
+    // 14E5: BLOCK_386 (parent = 1503) (addr = 0040478D)
+    // int distanceApart; // 14F1: LOCAL (type = 9)
+
+    // 1572: BLOCK_386 (parent = 15CF) (addr = 004049D5)
+    // int sliceDiff; // 157E: LOCAL (type = 9)
+    // int relPos; // 158C: LOCAL (type = 9)
+    // int lane_look_ahead; // 1597: LOCAL (type = 9)
+    // int toIndexInSortedList; // 15AB: LOCAL (type = 9)
+    // int toIndex; // 15C3: LOCAL (type = 9)
+
+    // 1554: BLOCK_386 (parent = 1572) (addr = 00404A97)
+    // int distanceApart; // 1560: LOCAL (type = 9)
+
+    CALL_WATCALL_VOID_1(0x00404587,
+        Car_tObj* mo,
+        mo
+    );
+}
+
 // GLOBAL - 0001:00003ce2 AI_SetupOncomingLaneDemerits_ 00404ce2 (code)
 // GLOBAL - 0001:00003daa AI_HandleChangeInNumLanes_ 00404daa (code)
 // GLOBAL - 0001:000040cd AI_HandleShouldersAndOffRoad_ 004050cd (code)

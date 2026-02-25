@@ -37,6 +37,7 @@ GAME_FUNC void DEFAULT_CALL Debugren_TestFacet(DRender_tView* Vi, DRender_tFacet
 {
     // DRender_tFacet3D* f; // 00AA: LOCAL (type = 87)
     // DRender_tListfacet result; // 00B0: LOCAL (type = 90)
+
     CALL_WATCALL_VOID_4(0x00429ea2,
         DRender_tView* Vi, DRender_tFacet** head, DRender_tFacet** tail, int lenght,
         Vi, head, tail, lenght

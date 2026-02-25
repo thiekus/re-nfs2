@@ -101,6 +101,7 @@ GAME_FUNC int DEFAULT_CALL Sim_CheckForPause(int checkInput)
     // int realTick; // 01BB: LOCAL (type = 9)
     // int diffReal; // 01C8: LOCAL (type = 9)
     // int diffGoal; // 01D5: LOCAL (type = 9)
+
     CALL_WATCALL_RESULT_1(int, 0x00443ae3,
         int checkInput,
         checkInput
@@ -114,5 +115,6 @@ GAME_FUNC void DEFAULT_CALL Sim_MainGameLoop(void)
 {
     // int lastRealTick; // 0207: LOCAL (type = 9)
     // int lastGoalTick; // 0218: LOCAL (type = 9)
+
     CALL_WATCALL_VOID_0(0x00443bb1);
 }

@@ -36,6 +36,7 @@ GAME_FUNC void DEFAULT_CALL DoMemSizeDisplay(void)
     // unsigned long plUsed; // 00C0: LOCAL (type = 68)
     // unsigned long plFree; // 00CB: LOCAL (type = 68)
     // unsigned long plLargest; // 00D6: LOCAL (type = 68)
+
     CALL_WATCALL_VOID_0(0x0045d890);
 }
 
@@ -78,6 +79,7 @@ GAME_FUNC void DEFAULT_CALL DoBlocSizeDisplay(int NumMemBlocks, int startnum)
     // unsigned int ModFlags; // 0203: LOCAL (type = 10)
     // unsigned int ModSeq; // 0210: LOCAL
     // unsigned long ModAdr; // 021B: LOCAL (type = 68)
+
     CALL_WATCALL_VOID_2(0x0045da69,
         int NumMemBlocks, int startnum,
         NumMemBlocks, startnum
@@ -92,6 +94,7 @@ GAME_FUNC void DEFAULT_CALL DoListBlocSizeDisplay(void)
     // int NumMemBlocks; // 0250: LOCAL (type = 9)
     // int times; // 0261: LOCAL (type = 9)
     // int i; // 026B: LOCAL (type = 9)
+
     CALL_WATCALL_VOID_0(0x0045daff);
 }
 
@@ -163,6 +166,7 @@ GAME_FUNC void DEFAULT_CALL nfs2MemDspFmt(void)
 {
     // unsigned long Val; // 03D2: LOCAL (type = 68)
     // char* sDest; // 03DA: LOCAL (type = 13)
+
     CALL_WATCALL_VOID_0(0x0045dc2f);
 }
 
@@ -178,6 +182,7 @@ GAME_FUNC void DEFAULT_CALL nfs2CalcMemFigures(unsigned long* plPool, unsigned l
     // LIBMEMBLOCK* pPrev; // 0442: LOCAL (type = 65)
     // LIBMEMBLOCK* pMem; // 044C: LOCAL (type = 65)
     // unsigned long Space; // 0455: LOCAL (type = 68)
+
     CALL_WATCALL_VOID_4(0x0045dc60,
         unsigned long* plPool, unsigned long* plUsed, unsigned long* plFree, unsigned long* plLargest,
         plPool, plUsed, plFree, plLargest
@@ -207,6 +212,7 @@ GAME_FUNC void DEFAULT_CALL nfs2DrawMemMap(int NumMemBlocks, int startnum)
     // unsigned int ModSeq; // 0544: LOCAL (type = 10)
     // unsigned long ModAdr; // 054F: LOCAL (type = 68)
     // int i; // 055A: LOCAL (type = 9)
+
     CALL_WATCALL_VOID_2(0x0045dd1e,
         int NumMemBlocks, int startnum,
         NumMemBlocks, startnum
@@ -221,5 +227,6 @@ GAME_FUNC void DEFAULT_CALL nfs2memsizedisplay(void)
     // int NumMemBlocks; // 0587: LOCAL (type = 9)
     // int times; // 0598: LOCAL (type = 9)
     // int i; // 05A2: LOCAL (type = 9)
+
     CALL_WATCALL_VOID_0(0x0045de67);
 }
