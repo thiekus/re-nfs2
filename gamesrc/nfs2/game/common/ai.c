@@ -355,17 +355,17 @@ GAME_FUNC int DEFAULT_CALL AI_LaneIndex(int slice, int position)
 }
 
 // GLOBAL - 0001:0000096f AI_PutCarOnShoulder_ 0040196f (code)
-// LOCAL  - 06CD: NEAR_RTN_386 (return type = 223) (none)
+// LOCAL  - 06CD: NEAR_RTN_386 (return type = 223) (none) (params?)
 // ARG 0  - 06FA: LOCAL (type = 202) (EAX)
+// ARG 1  - 0706: LOCAL (type = 9) (EDX)
 // STUB: NFSW 0x0040196f
-GAME_FUNC void DEFAULT_CALL AI_PutCarOnShoulder(Car_tObj* theCar)
+GAME_FUNC void DEFAULT_CALL AI_PutCarOnShoulder(Car_tObj* theCar, int rightShoulder)
 {
-    // int rightShoulder; // 0706: LOCAL (type = 9)
     // LIBCOORD offset; // 0718: LOCAL (type = 83)
 
-    CALL_WATCALL_VOID_1(0x0040196f,
-        Car_tObj* theCar,
-        theCar
+    CALL_WATCALL_VOID_2(0x0040196f,
+        Car_tObj* theCar, int rightShoulder,
+        theCar, rightShoulder
     );
 }
 
@@ -1268,7 +1268,7 @@ GAME_FUNC int DEFAULT_CALL AI_CalculateOncomingCarSpeed(Car_tObj* theCar)
 }
 
 // GLOBAL - 0001:00005abf AI_CalcTrafficSafeSpeed_ 00406abf (code)
-// LOCAL  - 1CFD: NEAR_RTN_386 (return type = 261) (EAX)
+// LOCAL  - 1CFD: NEAR_RTN_386 (return type = 261) (EAX) (params?)
 // ARG 0  - 1D2F: LOCAL (type = 202) (EAX)
 // ARG 1  - 1D3B: LOCAL (type = 9) (EDX)
 // STUB: NFSW 0x00406abf
@@ -1284,13 +1284,210 @@ GAME_FUNC int DEFAULT_CALL AI_CalcTrafficSafeSpeed(Car_tObj* theCar, int oldsafe
 }
 
 // GLOBAL - 0001:00005b46 AI_CalcPsychoDesiredSpeed_ 00406b46 (code)
+// LOCAL  - 1D63: NEAR_RTN_386 (return type = 223) (none) (params?)
+// ARG 0  - 1D96: LOCAL (type = 202) (EAX)
+// ARG 1  - 1D9E: LOCAL (type = 9) (EDX)
+// STUB: NFSW 0x00406b46
+GAME_FUNC void DEFAULT_CALL AI_CalcPsychoDesiredSpeed(Car_tObj* mo, int top_here)
+{
+    // int with; // 1DAB: LOCAL (type = 9)
+    // Car_tObj* target; // 1DB4: LOCAL (type = 202)
+    // int dist; // 1DC0: LOCAL (type = 9)
+    // int targetSpeed; // 1DC9: LOCAL (type = 9)
+
+    CALL_WATCALL_VOID_2(0x00406b46,
+        Car_tObj* mo, int top_here,
+        mo, top_here
+    );
+}
+
 // GLOBAL - 0001:00005ce3 AI_CalcDesiredSpeed_ 00406ce3 (code)
+// LOCAL  - 1E19: NEAR_RTN_386 (return type = 220) (none)
+// ARG 0  - 1E44: LOCAL (type = 202) (EAX)
+// STUB: NFSW 0x00406ce3
+GAME_FUNC void DEFAULT_CALL AI_CalcDesiredSpeed(Car_tObj* mo)
+{
+    // 1DD9: BLOCK_386 (parent = 1E19) (addr = 00406D21)
+    // int minDeltaSpeed; // 1DE5: LOCAL (type = 9)
+    // int top_here; // 1DF7: LOCAL (type = 9)
+    
+    // 1E04: BLOCK_386 (parent = 1E19) (addr = 00406EC0)
+    // int safe; // 1E10: LOCAL (type = 9)
+
+    CALL_WATCALL_VOID_1(0x00406ce3,
+        Car_tObj* mo,
+        mo
+    );
+}
+
 // GLOBAL - 0001:00005fef AI_GetHandlingFactor_ 00406fef (code)
+// LOCAL  - 1E4C: NEAR_RTN_386 (return type = 261) (EAX) (params?)
+// ARG 0  - 1E7B: LOCAL (type = 202) (EAX)
+// ARG 1  - 1E83: LOCAL (type = 9) (EDX)
+// STUB: NFSW 0x00406fef
+GAME_FUNC int DEFAULT_CALL AI_GetHandlingFactor(Car_tObj* mo, int noMercy)
+{
+    // int aDeltaYaw; // 1E8F: LOCAL (type = 9)
+    // int subHandlingFactor; // 1E9D: LOCAL (type = 9)
+    // int pSubHandlingFactor; // 1EB3: LOCAL (type = 9)
+    // int f_handling; // 1ECA: LOCAL (type = 9)
+
+    CALL_WATCALL_RESULT_2(int, 0x00406fef,
+        Car_tObj* mo, int noMercy,
+        mo, noMercy
+    );
+}
+
 // GLOBAL - 0001:000060c6 AI_GetAccGlueFactor_ 004070c6 (code)
+// LOCAL  - 1ED9: NEAR_RTN_386 (return type = 261) (EAX) (params?)
+// ARG 0  - 1F07: LOCAL (type = 202) (EAX)
+// ARG 1  - 1F0F: LOCAL (type = 9) (EDX)
+// STUB: NFSW 0x004070c6
+GAME_FUNC int DEFAULT_CALL AI_GetAccGlueFactor(Car_tObj* mo, int noMercy)
+{
+    // int f_accGlue; // 1F1B: LOCAL (type = 9)
+    // int oppTotalSlice; // 1F29: LOCAL (type = 9)
+    // int leadTotalSlice; // 1F3B: LOCAL (type = 9)
+    // int iTempIndex; // 1F4E: LOCAL (type = 9)
+    // int sliceDiff; // 1F5D: LOCAL (type = 9)
+    // int perAccGlue; // 1F6B: LOCAL (type = 9)
+    // int spreadGlue; // 1F7A: LOCAL (type = 9)
+    // int index; // 1F89: LOCAL (type = 9)
+
+    CALL_WATCALL_RESULT_2(int, 0x004070c6,
+        Car_tObj* mo, int noMercy,
+        mo, noMercy
+    );
+}
+
 // GLOBAL - 0001:0000626a AI_IntroduceGlue_ 0040726a (code)
+// LOCAL  - 1F93: NEAR_RTN_386 (return type = 221) (EAX)
+// ARG 0  - 1FBE: LOCAL (type = 9) (EAX)
+// ARG 1  - 1FCC: LOCAL (type = 9) (EDX)
+// STUB: NFSW 0x0040726a
+GAME_FUNC int DEFAULT_CALL AI_IntroduceGlue(int leadSlice, int f_glue)
+{
+    // int lapIndex; // 1FD7: LOCAL (type = 9)
+    // int glueDiff; // 1FE4: LOCAL (type = 9)
+
+    CALL_WATCALL_RESULT_2(int, 0x0040726a,
+        int leadSlice, int f_glue,
+        leadSlice, f_glue
+    );
+}
+
 // GLOBAL - 0001:0000639b AI_GetGlueFactor_ 0040739b (code)
+// LOCAL  - 1FF1: NEAR_RTN_386 (return type = 261) (EAX) (params?)
+// ARG 0  - 201C: LOCAL (type = 202) (EAX)
+// ARG 1  - 2024: LOCAL (type = 9) (EDX)
+// STUB: NFSW 0x0040739b
+GAME_FUNC int DEFAULT_CALL AI_GetGlueFactor(Car_tObj* mo, int noMercy)
+{
+    // int f_glue; // 2030: LOCAL (type = 9)
+    // int oppTotalSlice; // 203B: LOCAL (type = 9)
+    // int leadTotalSlice; // 204D: LOCAL (type = 9)
+    // int iTempIndex; // 2060: LOCAL (type = 9)
+    // int sliceDiff; // 206F: LOCAL (type = 9)
+    // int perGlue; // 207D: LOCAL (type = 9)
+    // int gameMult; // 2089: LOCAL (type = 9)
+
+    CALL_WATCALL_RESULT_2(int, 0x0040739b,
+        Car_tObj* mo, int noMercy,
+        mo, noMercy
+    );
+}
+
 // GLOBAL - 0001:000064fe AI_GetSpeedFactor_ 004074fe (code)
+// LOCAL  - 2096: NEAR_RTN_386 (return type = 261) (EAX) (params?)
+// ARG 0  - 20C2: LOCAL (type = 202) (EAX)
+// ARG 1  - 20CA: LOCAL (type = 9) (EDX)
+// STUB: NFSW 0x004074fe
+GAME_FUNC int DEFAULT_CALL AI_GetSpeedFactor(Car_tObj* mo, int noMercy)
+{
+    // int index; // 20D6: LOCAL (type = 9)
+    // int f_speed; // 20E0: LOCAL (type = 9)
+    // int spread; // 20EC: LOCAL (type = 9)
+    // int hackSlowDown; // 20F7: LOCAL (type = 9)
+
+    CALL_WATCALL_RESULT_2(int, 0x004074fe,
+        Car_tObj* mo, int noMercy,
+        mo, noMercy
+    );
+}
+
 // GLOBAL - 0001:0000663d AI_LimitTopSpeed_ 0040763d (code)
+// LOCAL  - 2125: NEAR_RTN_386 (return type = 261) (EAX) (params?)
+// ARG 0  - 2150: LOCAL (type = 202) (EAX)
+// ARG 1  - 2158: LOCAL (type = 9) (EDX)
+// STUB: NFSW 0x0040763d
+GAME_FUNC int DEFAULT_CALL AI_LimitTopSpeed(Car_tObj* mo, int f_final)
+{
+    // int distance; // 2164: LOCAL (type = 9)
+    // int playerLoop; // 2171: LOCAL (type = 9)
+
+    // 2108: BLOCK_386 (parent = 2125) (addr = 00407673)
+    // int thisDistance; // 2114: LOCAL (type = 9)
+
+    CALL_WATCALL_RESULT_2(int, 0x0040763d,
+        Car_tObj* mo, int f_final,
+        mo, f_final
+    );
+}
+
 // GLOBAL - 0001:000066fc AI_CalcTrafficSafeSpeedAdjust_ 004076fc (code)
+// LOCAL  - 2180: NEAR_RTN_386 (return type = 220) (none)
+// ARG 0  - 21B5: LOCAL (type = 202) (EAX)
+// STUB: NFSW 0x004076fc
+GAME_FUNC void DEFAULT_CALL AI_CalcTrafficSafeSpeedAdjust(Car_tObj* theCar)
+{
+    // int randval; // 21C1: LOCAL (type = 9)
+
+    CALL_WATCALL_VOID_1(0x004076fc,
+        Car_tObj* theCar,
+        theCar
+    );
+}
+
 // GLOBAL - 0001:0000675e AI_GetTrackFactor_ 0040775e (code)
+// LOCAL  - 21CD: NEAR_RTN_386 (return type = 260) (EAX)
+// ARG 0  - 21F7: LOCAL (type = 202) (EAX)
+// STUB: NFSW 0x0040775e
+GAME_FUNC int DEFAULT_CALL AI_GetTrackFactor(Car_tObj* theCar)
+{
+    CALL_WATCALL_RESULT_1(int, 0x0040775e,
+        Car_tObj* theCar,
+        theCar
+    );
+}
+
 // GLOBAL - 0001:000067dc AI_CalcAggressiveTopSpeed_ 004077dc (code)
+// LOCAL  - 2261: NEAR_RTN_386 (return type = 260) (EAX)
+// ARG 0  - 2293: LOCAL (type = 202) (EAX)
+// STUB: NFSW 0x004077dc
+GAME_FUNC int DEFAULT_CALL AI_CalcAggressiveTopSpeed(Car_tObj* mo)
+{
+    // int oppSlice; // 229B: LOCAL (type = 9)
+    // int leadSlice; // 22A8: LOCAL (type = 9)
+    // int top_speed; // 22B6: LOCAL (type = 9)
+    // int adj_top_speed; // 22C4: LOCAL (type = 9)
+    // int f_speed; // 22D6: LOCAL (type = 9)
+    // int f_handling; // 22E2: LOCAL (type = 9)
+    // int f_glue; // 22F1: LOCAL (type = 9)
+    // int f_track; // 22FC: LOCAL (type = 9)
+    // int noMercy; // 2308: LOCAL (type = 9)
+
+    // 2203: BLOCK_386 (parent = 2261) (addr = 004078D8)
+    // int f_start; // 220F: LOCAL (type = 9)
+
+    // 2240: BLOCK_386 (parent = 2261) (addr = 00407999)
+    // int slicesPastFinish; // 224C: LOCAL (type = 9)
+
+    // 221B: BLOCK_386 (parent = 2240) (addr = 004079A2)
+    // int latLeft; // 2227: LOCAL (type = 9)
+    // int latRight; // 2233: LOCAL (type = 9)
+
+    CALL_WATCALL_RESULT_1(int, 0x004077dc,
+        Car_tObj* mo,
+        mo
+    );
+}
