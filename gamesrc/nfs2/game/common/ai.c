@@ -25,7 +25,7 @@
 // GLOBAL - 0003:00000010 _personalities 004e9010 (bss)
 // LOCAL  - 0000: MODULE_386 (type = 73)
 // GLOBAL: NFSW 0x004e9010
-// personality_t* personalities[16]
+// personality_t* personalities[16];
 
 // GLOBAL - 0003:00000050 _inverseLaneWidthTable 004e9050 (bss)
 // LOCAL  - 0016: MODULE_386 (type = 74)
@@ -990,23 +990,299 @@ GAME_FUNC void DEFAULT_CALL AI_CalculateLaneSpeeds(Car_tObj* mo)
 }
 
 // GLOBAL - 0001:00003ce2 AI_SetupOncomingLaneDemerits_ 00404ce2 (code)
+// LOCAL  - 164A: NEAR_RTN_386 (return type = 220) (none)
+// ARG 0  - 167E: LOCAL (type = 202) (EAX)
+// STUB: NFSW 0x00404ce2
+GAME_FUNC void DEFAULT_CALL AI_SetupOncomingLaneDemerits(Car_tObj* mo)
+{
+    CALL_WATCALL_VOID_1(0x00404ce2,
+        Car_tObj* mo,
+        mo
+    );
+}
+
 // GLOBAL - 0001:00003daa AI_HandleChangeInNumLanes_ 00404daa (code)
+// LOCAL  - 1686: NEAR_RTN_386 (return type = 220) (none)
+// ARG 0  - 16B7: LOCAL (type = 202) (EAX)
+// STUB: NFSW 0x00404daa
+GAME_FUNC void DEFAULT_CALL AI_HandleChangeInNumLanes(Car_tObj* mo)
+{
+    // int lookAheadSlice; // 16BF: LOCAL (type = 9)
+    // int absLaneLookAhead; // 16D2: LOCAL (type = 9)
+    // int lookAhead; // 16E7: LOCAL (type = 9)
+    // int laneIndex; // 16F5: LOCAL (type = 9)
+
+    CALL_WATCALL_VOID_1(0x00404daa,
+        Car_tObj* mo,
+        mo
+    );
+}
+
 // GLOBAL - 0001:000040cd AI_HandleShouldersAndOffRoad_ 004050cd (code)
+// LOCAL  - 1726: NEAR_RTN_386 (return type = 220) (none)
+// ARG 0  - 175A: LOCAL (type = 202) (EAX)
+// STUB: NFSW 0x004050cd
+GAME_FUNC void DEFAULT_CALL AI_HandleShouldersAndOffRoad(Car_tObj* mo)
+{
+    // int slice; // 1762: LOCAL (type = 9)
+    // int shoulder_merit; // 176C: LOCAL (type = 9)
+
+    // 1703: BLOCK_386 (parent = 1726) (addr = 00405224)
+    // int isLeft; // 170F: LOCAL (type = 9)
+    // int isRight; // 171A: LOCAL (type = 9)
+
+    CALL_WATCALL_VOID_1(0x004050cd,
+        Car_tObj* mo,
+        mo
+    );
+}
+
+
+
 // GLOBAL - 0001:00004609 AI_HandleHonkingAndDiving_ 00405609 (code)
+// LOCAL  - 1798: NEAR_RTN_386 (return type = 220) (none)
+// ARG 0  - 17C9: LOCAL (type = 202) (EAX)
+// STUB: NFSW 0x00405609
+GAME_FUNC void DEFAULT_CALL AI_HandleHonkingAndDiving(Car_tObj* mo)
+{
+    // int isVisible; // 17D1: LOCAL (type = 9)
+
+    // 177F: BLOCK_386 (parent = 1798) (addr = 00405663)
+    // int honkprob; // 178B: LOCAL
+
+    CALL_WATCALL_VOID_1(0x00405609,
+        Car_tObj* mo,
+        mo
+    );
+}
+
 // GLOBAL - 0001:000046d7 AI_WhichHumanIsLeading_ 004056d7 (code)
+// LOCAL  - 17DF: NEAR_RTN_386 (return type = 23) (none)
+// STUB: NFSW 0x004056d7
+GAME_FUNC void DEFAULT_CALL AI_WhichHumanIsLeading(void)
+{
+    // int ci; // 180A: LOCAL (type = 9)
+    // int leadSlice; // 1811: LOCAL (type = 9)
+
+    CALL_WATCALL_VOID_0(0x004056d7);
+}
+
 // GLOBAL - 0001:0000475d AI_CalculateLaneInfo_ 0040575d (code)
+// LOCAL  - 181F: NEAR_RTN_386 (return type = 220) (none)
+// ARG 0  - 184B: LOCAL (type = 202) (EAX)
+// STUB: NFSW 0x0040575d
+GAME_FUNC void DEFAULT_CALL AI_CalculateLaneInfo(Car_tObj* mo)
+{
+    // int leftEdge; // 1853: LOCAL (type = 9)
+    // int rightEdge; // 1860: LOCAL (type = 9)
+    // int rightEdgeIndex; // 186E: LOCAL (type = 9)
+    // int leftEdgeIndex; // 1881: LOCAL (type = 9)
+    // int carIndex; // 1893: LOCAL (type = 9)
+    // int laneLoop; // 18A0: LOCAL (type = 9)
+
+    CALL_WATCALL_VOID_1(0x0040575d,
+        Car_tObj* mo,
+        mo
+    );
+}
+
 // GLOBAL - 0001:0000487e AI_InitAndCalcBaseMerits_ 0040587e (code)
+// LOCAL  - 18AD: NEAR_RTN_386 (return type = 220) (none)
+// ARG 0  - 18DD: LOCAL (type = 202) (EAX)
+// STUB: NFSW 0x0040587e
+GAME_FUNC void DEFAULT_CALL AI_InitAndCalcBaseMerits(Car_tObj* mo)
+{
+    // int o; // 18E5: LOCAL (type = 9)
+
+    CALL_WATCALL_VOID_1(0x0040587e,
+        Car_tObj* mo,
+        mo
+    );
+}
+
 // GLOBAL - 0001:0000497d AI_ChooseBestLane_ 0040597d (code)
+// LOCAL  - 18EB: NEAR_RTN_386 (return type = 220) (none)
+// ARG 0  - 1914: LOCAL (type = 202) (EAX)
+// STUB: NFSW 0x0040597d
+GAME_FUNC void DEFAULT_CALL AI_ChooseBestLane(Car_tObj* mo)
+{
+    // int best; // 191C: LOCAL (type = 9)
+    // int decision; // 1925: LOCAL (type = 9)
+
+    CALL_WATCALL_VOID_1(0x0040597d,
+        Car_tObj* mo,
+        mo
+    );
+}
+
 // GLOBAL - 0001:00004a24 AI_CalculateAdjustedDesiredSpeed_ 00405a24 (code)
+// LOCAL  - 1947: NEAR_RTN_386 (return type = 220) (none)
+// ARG 0  - 197F: LOCAL (type = 202) (EAX)
+// STUB: NFSW 0x00405a24
+GAME_FUNC void DEFAULT_CALL AI_CalculateAdjustedDesiredSpeed(Car_tObj* mo)
+{
+    // int Drel_hit; // 1987: LOCAL (type = 9)
+    // int Dlane; // 1994: LOCAL (type = 9)
+    // int Vrel_hit; // 199E: LOCAL (type = 9)
+    // int Vlane; // 19AB: LOCAL (type = 9)
+    // int finalLaneSpeed; // 19B5: LOCAL (type = 9)
+    // int a; // 19C8: LOCAL (type = 9)
+    // int b; // 19CE: LOCAL (type = 9)
+    // int decision; // 19D4: LOCAL (type = 9)
+
+    // 1932: BLOCK_386 (parent = 1947) (addr = 00405A65)
+    // int temp; // 193E: LOCAL (type = 9)
+
+    CALL_WATCALL_VOID_1(0x00405a24,
+        Car_tObj* mo,
+        mo
+    );
+}
+
 // GLOBAL - 0001:00004d50 AI_CalculateDesiredPosition_ 00405d50 (code)
+// LOCAL  - 19FC: NEAR_RTN_386 (return type = 220) (none)
+// ARG 0  - 1A2F: LOCAL (type = 202) (EAX)
+// STUB: NFSW 0x00405d50
+GAME_FUNC void DEFAULT_CALL AI_CalculateDesiredPosition(Car_tObj* mo)
+{
+    // Car_tObj* carInWay; // 1A37: LOCAL (type = 202)
+    // int leftRoadEdge; // 1A45: LOCAL (type = 9)
+    // int rightRoadEdge; // 1A56: LOCAL (type = 9)
+    // int gapLeft; // 1A68: LOCAL (type = 9)
+    // int gapRight; // 1A74: LOCAL (type = 9)
+    // int absLaneIndex; // 1A81: LOCAL (type = 9)
+    // int slice; // 1A92: LOCAL (type = 9)
+
+    // 19E1: BLOCK_386 (parent = 19FC) (addr = 00405E05)
+    // int minGapSize; // 19ED: LOCAL (type = 9)
+
+    CALL_WATCALL_VOID_1(0x00405d50,
+        Car_tObj* mo,
+        mo
+    );
+}
+
 // GLOBAL - 0001:00005203 AI_ProcessObservationsAndChooseLane_ 00406203 (code)
+// LOCAL  - 1A9C: NEAR_RTN_386 (return type = 220) (none)
+// ARG 0  - 1AD7: LOCAL (type = 202) (EAX)
+// STUB: NFSW 0x00406203
+GAME_FUNC void DEFAULT_CALL AI_ProcessObservationsAndChooseLane(Car_tObj* mo)
+{
+    // int i; // 1ADF: LOCAL (type = 9)
+
+    CALL_WATCALL_VOID_1(0x00406203,
+        Car_tObj* mo,
+        mo
+    );
+}
+
 // GLOBAL - 0001:000052c2 AI_CheckForBarriers_ 004062c2 (code)
+// LOCAL  - 1B00: NEAR_RTN_386 (return type = 220) (none)
+// ARG 0  - 1B2B: LOCAL (type = 202) (EAX)
+// STUB: NFSW 0x004062c2
+GAME_FUNC void DEFAULT_CALL AI_CheckForBarriers(Car_tObj* mo)
+{
+    // int dir; // 1B33: LOCAL (type = 9)
+    // int slicesAhead; // 1B3B: LOCAL (type = 9)
+    // int forwardSlice0; // 1B4B: LOCAL (type = 9)
+    // int forwardSlice1; // 1B5D: LOCAL (type = 9)
+    // int interval; // 1B6F: LOCAL (type = 9)
+    // int masks[3]; // 1B7C: LOCAL (type = 263)
+    // int laneNotChecked[3]; // 1B87: LOCAL (type = 264)
+    // int speed; // 1B9B: LOCAL (type = 9)
+    // int sliceLoop; // 1BA5: LOCAL (type = 9)
+    // int slice; // 1BB3: LOCAL (type = 9)
+    // int profileHere; // 1BBD: LOCAL (type = 9)
+
+    // 1AE5: BLOCK_386 (parent = 1B00) (addr = 004065AB)
+    // int checkSlice; // 1AF1: LOCAL (type = 9)
+
+    CALL_WATCALL_VOID_1(0x004062c2,
+        Car_tObj* mo,
+        mo
+    );
+}
+
 // GLOBAL - 0001:000056ba AI_CalculateRoadYaw_ 004066ba (code)
+// LOCAL  - 1BEB: NEAR_RTN_386 (return type = 220) (none)
+// ARG 0  - 1C16: LOCAL (type = 202) (EAX)
+// STUB: NFSW 0x004066ba
+GAME_FUNC void DEFAULT_CALL AI_CalculateRoadYaw(Car_tObj* mo)
+{
+    // 1BCD: BLOCK_386 (parent = 1BEB) (addr = 004066DB)
+    // int yaw0; // 1BD9: LOCAL (type = 9)
+    // int yaw1; // 1BE2: LOCAL (type = 9)
+
+    CALL_WATCALL_VOID_1(0x004066ba,
+        Car_tObj* mo,
+        mo
+    );
+}
+
 // GLOBAL - 0001:00005769 AI_Main_OverallSetup_ 00406769 (code)
+// LOCAL  - 1C1E: NEAR_RTN_386 (return type = 23) (none)
+// STUB: NFSW 0x00406769
+GAME_FUNC void DEFAULT_CALL AI_Main_OverallSetup(void)
+{
+    CALL_WATCALL_VOID_0(0x00406769);
+}
+
 // GLOBAL - 0001:00005783 AI_Main_CalcCarInfo_ 00406783 (code)
+// LOCAL  - 1C47: NEAR_RTN_386 (return type = 220) (none)
+// ARG 0  - 1C72: LOCAL (type = 202) (EAX)
+// STUB: NFSW 0x00406783
+GAME_FUNC void DEFAULT_CALL AI_Main_CalcCarInfo(Car_tObj* mo)
+{
+    // int ignore; // 1C7A: LOCAL (type = 9)
+
+    CALL_WATCALL_VOID_1(0x00406783,
+        Car_tObj* mo,
+        mo
+    );
+}
+
 // GLOBAL - 0001:000057f7 AI_Main_ 004067f7 (code)
+// LOCAL  - 1C85: NEAR_RTN_386 (return type = 220) (none)
+// ARG 0  - 1CA4: LOCAL (type = 202) (EAX)
+// STUB: NFSW 0x004067f7
+GAME_FUNC void DEFAULT_CALL AI_Main(Car_tObj* mo)
+{
+    CALL_WATCALL_VOID_1(0x004067f7,
+        Car_tObj* mo,
+        mo
+    );
+}
+
 // GLOBAL - 0001:00005a0e AI_CalculateOncomingCarSpeed_ 00406a0e (code)
+// LOCAL  - 1CAC: NEAR_RTN_386 (return type = 260) (EAX)
+// ARG 0  - 1CE1: LOCAL (type = 202) (EAX)
+// STUB: NFSW 0x00406a0e
+GAME_FUNC int DEFAULT_CALL AI_CalculateOncomingCarSpeed(Car_tObj* theCar)
+{
+    // int playerSpeed; // 1CED: LOCAL (type = 9)
+
+    CALL_WATCALL_RESULT_1(int, 0x00406a0e,
+        Car_tObj* theCar,
+        theCar
+    );
+}
+
 // GLOBAL - 0001:00005abf AI_CalcTrafficSafeSpeed_ 00406abf (code)
+// LOCAL  - 1CFD: NEAR_RTN_386 (return type = 261) (EAX)
+// ARG 0  - 1D2F: LOCAL (type = 202) (EAX)
+// ARG 1  - 1D3B: LOCAL (type = 9) (EDX)
+// STUB: NFSW 0x00406abf
+GAME_FUNC int DEFAULT_CALL AI_CalcTrafficSafeSpeed(Car_tObj* theCar, int oldsafe)
+{
+    // int newsafe; // 1D47: LOCAL (type = 9)
+    // int safeminus30; // 1D53: LOCAL (type = 9)
+
+    CALL_WATCALL_RESULT_2(int, 0x00406abf,
+        Car_tObj* theCar, int oldsafe,
+        theCar, oldsafe
+    );
+}
+
 // GLOBAL - 0001:00005b46 AI_CalcPsychoDesiredSpeed_ 00406b46 (code)
 // GLOBAL - 0001:00005ce3 AI_CalcDesiredSpeed_ 00406ce3 (code)
 // GLOBAL - 0001:00005fef AI_GetHandlingFactor_ 00406fef (code)

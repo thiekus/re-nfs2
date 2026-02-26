@@ -14,6 +14,7 @@ set(CMAKE_WATCOM_RUNTIME_LIBRARY "MultiThreaded")
 # -zp1 : 1-byte structure alignment, follows Watcom 10.6 and lower default
 # -d2  : full debugging info
 # -hc  : using MS PDB/Codeview debug format
+# -hd  : using DWARF debug format
 # -5r  : use Intel Pentium register-based calling conventions
 # -mf  : 32-bit flat memory model
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -w4 -e25 -zp1 -d2 -hc -5r -mf")
@@ -87,6 +88,7 @@ file(GLOB RENFS2_LBC dllexports/renfs2.lbc)
 # file(GLOB NFS2_LBC dllexports/nfs2.lbc)
 file(GLOB EAC_LBC dllexports/eac.lbc)
 file(GLOB CRT_LBC dllexports/crt.lbc)
+# d all : expose all dwarf debug info
 # d codeview op cvp : expose ms codeview debug info
 # op m: generate mapfile
 set_target_properties(renfs2 PROPERTIES LINK_FLAGS
