@@ -854,6 +854,12 @@ GAME_FUNC void DEFAULT_CALL AI_HonkWhenTailgaiting(Car_tObj* mo, Car_tObj* to, i
 {
     // int sliceDiff; // 128F: LOCAL (type = 9)
 
+    // 121F: BLOCK_386 (parent = 123D) (addr = 00403E6C)
+    // int metersBetween; // 122B: LOCAL (type = 9)
+
+    // 1207: BLOCK_386 (parent = 121F) (addr = 00403EB5)
+    // int randval; // 1213: LOCAL (type = 9)
+
     CALL_WATCALL_VOID_3(0x00403e0b,
         Car_tObj* mo, Car_tObj* to, int toLaneIndex,
         mo, to, toLaneIndex
