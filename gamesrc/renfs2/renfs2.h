@@ -15,6 +15,9 @@
 // Trace unimplemented functions
 #define RENFS2_STUB_TRACE
 
+// Trace certain unfinished functions
+#define RENFS2_FUNC_TRACE
+
 // On OpenWatcom v1.4 and later, enforce __watcall
 // for use Watcom register-based call convention
 // https://web.archive.org/web/20210324032216/http://wiki.openwatcom.org/index.php/C_Compilers_Release_Changes
@@ -36,58 +39,64 @@
 #define GAME_FUNC
 #endif
 
-#ifdef RENFS2_STUB_TRACE
+#if defined(RENFS2_STUB_TRACE) || defined(RENFS2_FUNC_TRACE)
 // Ensure it has printf()
 #include <stdio.h>
+#if !defined(__func__)
+#define __func__ ""
+#endif
+#endif
+
+#ifdef RENFS2_STUB_TRACE
 #define TRACE_STUB_0() \
     printf("STUB: %s()\n", \
         __func__ \
     )
 #define TRACE_STUB_1(arg0) \
-    printf("STUB: %s(0x%x.8)\n", \
+    printf("STUB: %s(0x%.8x)\n", \
         __func__, \
         (unsigned long) arg0 \
     )
 #define TRACE_STUB_2(arg0, arg1) \
-    printf("STUB: %s(0x%x.8, 0x%x.8)\n", \
+    printf("STUB: %s(0x%.8x, 0x%.8x)\n", \
         __func__, \
         (unsigned long) arg0, (unsigned long) arg1 \
     )
 #define TRACE_STUB_3(arg0, arg1, arg2) \
-    printf("STUB: %s(0x%x.8, 0x%x.8, 0x%x.8)\n", \
+    printf("STUB: %s(0x%.8x, 0x%.8x, 0x%.8x)\n", \
         __func__, \
         (unsigned long) arg0, (unsigned long) arg1, (unsigned long) arg2 \
     )
 #define TRACE_STUB_4(arg0, arg1, arg2, arg3) \
-    printf("STUB: %s(0x%x.8, 0x%x.8, 0x%x.8, 0x%x.8)\n", \
+    printf("STUB: %s(0x%.8x, 0x%.8x, 0x%.8x, 0x%.8x)\n", \
         __func__, \
         (unsigned long) arg0, (unsigned long) arg1, (unsigned long) arg2, (unsigned long) arg3 \
     )
 #define TRACE_STUB_4(arg0, arg1, arg2, arg3) \
-    printf("STUB: %s(0x%x.8, 0x%x.8, 0x%x.8, 0x%x.8)\n", \
+    printf("STUB: %s(0x%.8x, 0x%.8x, 0x%.8x, 0x%.8x)\n", \
         __func__, \
         (unsigned long) arg0, (unsigned long) arg1, (unsigned long) arg2, (unsigned long) arg3 \
     )
 #define TRACE_STUB_5(arg0, arg1, arg2, arg3, arg4) \
-    printf("STUB: %s(0x%x.8, 0x%x.8, 0x%x.8, 0x%x.8, 0x%x.8)\n", \
+    printf("STUB: %s(0x%.8x, 0x%.8x, 0x%.8x, 0x%.8x, 0x%.8x)\n", \
         __func__, \
         (unsigned long) arg0, (unsigned long) arg1, (unsigned long) arg2, (unsigned long) arg3, \
         (unsigned long) arg4 \
     )
 #define TRACE_STUB_6(arg0, arg1, arg2, arg3, arg4, arg5) \
-    printf("STUB: %s(0x%x.8, 0x%x.8, 0x%x.8, 0x%x.8, 0x%x.8, 0x%x.8)\n", \
+    printf("STUB: %s(0x%.8x, 0x%.8x, 0x%.8x, 0x%.8x, 0x%.8x, 0x%.8x)\n", \
         __func__, \
         (unsigned long) arg0, (unsigned long) arg1, (unsigned long) arg2, (unsigned long) arg3, \
         (unsigned long) arg4, (unsigned long) arg5 \
     )
 #define TRACE_STUB_7(arg0, arg1, arg2, arg3, arg4, arg5, arg6) \
-    printf("STUB: %s(0x%x.8, 0x%x.8, 0x%x.8, 0x%x.8, 0x%x.8, 0x%x.8, 0x%x.8)\n", \
+    printf("STUB: %s(0x%.8x, 0x%.8x, 0x%.8x, 0x%.8x, 0x%.8x, 0x%.8x, 0x%.8x)\n", \
         __func__, \
         (unsigned long) arg0, (unsigned long) arg1, (unsigned long) arg2, (unsigned long) arg3, \
         (unsigned long) arg4, (unsigned long) arg5, (unsigned long) arg6 \
     )
 #define TRACE_STUB_8(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) \
-    printf("STUB: %s(0x%x.8, 0x%x.8, 0x%x.8, 0x%x.8, 0x%x.8, 0x%x.8, 0x%x.8, 0x%x.8)\n", \
+    printf("STUB: %s(0x%.8x, 0x%.8x, 0x%.8x, 0x%.8x, 0x%.8x, 0x%.8x, 0x%.8x, 0x%.8x)\n", \
         __func__, \
         (unsigned long) arg0, (unsigned long) arg1, (unsigned long) arg2, (unsigned long) arg3, \
         (unsigned long) arg4, (unsigned long) arg5, (unsigned long) arg6, (unsigned long) arg7 \
@@ -102,6 +111,72 @@
 #define TRACE_STUB_6(arg0, arg1, arg2, arg3, arg4, arg5)
 #define TRACE_STUB_7(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
 #define TRACE_STUB_8(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+#endif
+
+#ifdef RENFS2_FUNC_TRACE
+#define TRACE_FUNC_0() \
+    printf("TRACE_FUNC: %s()\n", \
+        __func__ \
+    )
+#define TRACE_FUNC_1(arg0) \
+    printf("TRACE_FUNC: %s(0x%.8x)\n", \
+        __func__, \
+        (unsigned long) arg0 \
+    )
+#define TRACE_FUNC_2(arg0, arg1) \
+    printf("TRACE_FUNC: %s(0x%.8x, 0x%.8x)\n", \
+        __func__, \
+        (unsigned long) arg0, (unsigned long) arg1 \
+    )
+#define TRACE_FUNC_3(arg0, arg1, arg2) \
+    printf("TRACE_FUNC: %s(0x%.8x, 0x%.8x, 0x%.8x)\n", \
+        __func__, \
+        (unsigned long) arg0, (unsigned long) arg1, (unsigned long) arg2 \
+    )
+#define TRACE_FUNC_4(arg0, arg1, arg2, arg3) \
+    printf("TRACE_FUNC: %s(0x%.8x, 0x%.8x, 0x%.8x, 0x%.8x)\n", \
+        __func__, \
+        (unsigned long) arg0, (unsigned long) arg1, (unsigned long) arg2, (unsigned long) arg3 \
+    )
+#define TRACE_FUNC_4(arg0, arg1, arg2, arg3) \
+    printf("TRACE_FUNC: %s(0x%.8x, 0x%.8x, 0x%.8x, 0x%.8x)\n", \
+        __func__, \
+        (unsigned long) arg0, (unsigned long) arg1, (unsigned long) arg2, (unsigned long) arg3 \
+    )
+#define TRACE_FUNC_5(arg0, arg1, arg2, arg3, arg4) \
+    printf("TRACE_FUNC: %s(0x%.8x, 0x%.8x, 0x%.8x, 0x%.8x, 0x%.8x)\n", \
+        __func__, \
+        (unsigned long) arg0, (unsigned long) arg1, (unsigned long) arg2, (unsigned long) arg3, \
+        (unsigned long) arg4 \
+    )
+#define TRACE_FUNC_6(arg0, arg1, arg2, arg3, arg4, arg5) \
+    printf("TRACE_FUNC: %s(0x%.8x, 0x%.8x, 0x%.8x, 0x%.8x, 0x%.8x, 0x%.8x)\n", \
+        __func__, \
+        (unsigned long) arg0, (unsigned long) arg1, (unsigned long) arg2, (unsigned long) arg3, \
+        (unsigned long) arg4, (unsigned long) arg5 \
+    )
+#define TRACE_FUNC_7(arg0, arg1, arg2, arg3, arg4, arg5, arg6) \
+    printf("TRACE_FUNC: %s(0x%.8x, 0x%.8x, 0x%.8x, 0x%.8x, 0x%.8x, 0x%.8x, 0x%.8x)\n", \
+        __func__, \
+        (unsigned long) arg0, (unsigned long) arg1, (unsigned long) arg2, (unsigned long) arg3, \
+        (unsigned long) arg4, (unsigned long) arg5, (unsigned long) arg6 \
+    )
+#define TRACE_FUNC_8(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) \
+    printf("TRACE_FUNC: %s(0x%.8x, 0x%.8x, 0x%.8x, 0x%.8x, 0x%.8x, 0x%.8x, 0x%.8x, 0x%.8x)\n", \
+        __func__, \
+        (unsigned long) arg0, (unsigned long) arg1, (unsigned long) arg2, (unsigned long) arg3, \
+        (unsigned long) arg4, (unsigned long) arg5, (unsigned long) arg6, (unsigned long) arg7 \
+    )
+#else
+#define TRACE_FUNC_0()
+#define TRACE_FUNC_1(arg0)
+#define TRACE_FUNC_2(arg0, arg1)
+#define TRACE_FUNC_3(arg0, arg1, arg2)
+#define TRACE_FUNC_4(arg0, arg1, arg2, arg3)
+#define TRACE_FUNC_5(arg0, arg1, arg2, arg3, arg4)
+#define TRACE_FUNC_6(arg0, arg1, arg2, arg3, arg4, arg5)
+#define TRACE_FUNC_7(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
+#define TRACE_FUNC_8(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
 #endif
 
 // Helper macros for calling back to original function on stubbed functions
