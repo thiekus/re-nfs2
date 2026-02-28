@@ -137,8 +137,7 @@
 // int useSpreadForce;
 
 // FAKE TYPES: delete them after correctly implemented!
-struct Car_tObj{int fakeValue;};
-typedef struct Car_tObj Car_tObj;
+typedef struct Car_tObj{int fakeValue;} Car_tObj;
 typedef void* Udff_tHandle;
 typedef struct coorddef{int fakeValue;} LIBCOORD;
 
