@@ -13,6 +13,12 @@
 ++galloc_.renfs2
 ++gfree_.renfs2
 
+# Module index 260 (win\obja\uv.obj) and 261 (win\uva.asm)
+++_uvinitvideodecoder.renfs2
+++_uvsetqualityindex.renfs2
+++_uvdecodeblock.renfs2
+++_uvdecodedcblock.renfs2
+
 # Module index 290 (win\getm.asm)
 # ++_gputi.renfs2
 # ++_ggetm.renfs2
