@@ -107,7 +107,7 @@
 // GLOBAL - 0001:0002fded Nfs2_SystemNLibStartUp_ 00430ded (code)
 // LOCAL  - 0221: NEAR_RTN_386 (return type = 23) (none)
 // STUB: NFSW 0x00430ded
-GAME_FUNC void DEFAULT_CALL Nfs2_SystemNLibStartUp()
+GAME_FUNC void DEFAULT_CALL Nfs2_SystemNLibStartUp(void)
 {
     CALL_WATCALL_VOID_0(0x00430ded);
 }
@@ -115,7 +115,7 @@ GAME_FUNC void DEFAULT_CALL Nfs2_SystemNLibStartUp()
 // GLOBAL - 0001:0002fe11 Nfs2_SystemNLibCleanUp_ 00430e11 (code)
 // LOCAL  - 024C: NEAR_RTN_386 (return type = 23) (none)
 // STUB: NFSW 0x00430e11
-GAME_FUNC void DEFAULT_CALL Nfs2_SystemNLibCleanUp()
+GAME_FUNC void DEFAULT_CALL Nfs2_SystemNLibCleanUp(void)
 {
     CALL_WATCALL_VOID_0(0x00430e11);
 }
@@ -123,7 +123,7 @@ GAME_FUNC void DEFAULT_CALL Nfs2_SystemNLibCleanUp()
 // GLOBAL - 0001:0002fe30 Nfs2_BefuddleCode_ 00430e30 (code)
 // LOCAL  - 0277: NEAR_RTN_386 (return type = 23) (none)
 // STUB: NFSW 0x00430e30
-GAME_FUNC void DEFAULT_CALL Nfs2_BefuddleCode()
+GAME_FUNC void DEFAULT_CALL Nfs2_BefuddleCode(void)
 {
     // int loop; // 029D: LOCAL (type = 9)
 
@@ -145,7 +145,7 @@ GAME_FUNC void DEFAULT_CALL Nfs2_ChangeExtension(char* ext)
 // GLOBAL - 0001:0002fea2 Nfs2_ResetGame_ 00430ea2 (code)
 // LOCAL  - 02DA: NEAR_RTN_386 (return type = 23) (none)
 // STUB: NFSW 0x00430ea2
-GAME_FUNC void DEFAULT_CALL Nfs2_ResetGame()
+GAME_FUNC void DEFAULT_CALL Nfs2_ResetGame(void)
 {
     CALL_WATCALL_VOID_0(0x00430ea2);
 }
@@ -165,7 +165,7 @@ GAME_FUNC void DEFAULT_CALL Nfs2_GameModuleStartUp(int* FrontEndDataStream)
 // GLOBAL - 0001:00030009 Nfs2_CleanUpGameModule_ 00431009 (code)
 // LOCAL  - 0343: NEAR_RTN_386 (return type = 23) (none)
 // STUB: NFSW 0x00431009
-GAME_FUNC void DEFAULT_CALL Nfs2_CleanUpGameModule()
+GAME_FUNC void DEFAULT_CALL Nfs2_CleanUpGameModule(void)
 {
     // short k; // 036E: LOCAL (type = 7)
 
