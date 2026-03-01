@@ -32,7 +32,7 @@ Due to NFS2 as Watcom EXE which did extensive use of `__watcall` (Watcom registe
 Before building using CMake, due to cmake building wasm issues, you need build `eacstub.asm` before into compiled object. To build eacstub, enter `gamesrc/eacstub` directory and build using `wasm` with:
 
 ```sh
-wasm eacstub.asm
+wasm -we eacstub.asm
 ```
 
 This will generate `eacstub.obj` on windows. On Linux, it will generate `eacstub.o` and rename into same `eacstub.obj`.
