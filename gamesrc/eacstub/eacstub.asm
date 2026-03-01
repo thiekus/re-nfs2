@@ -4683,29 +4683,29 @@ MakeTableEntry_ proc near
 
 MakeTableEntry_ endp
 
-_uvinitvideodecoder proc near
-    push 0049f038h
-    ret
+; _uvinitvideodecoder proc near
+;     push 0049f038h
+;     ret
 
-_uvinitvideodecoder endp
+; _uvinitvideodecoder endp
 
-_uvsetqualityindex proc near
-    push 0049f184h
-    ret
+; _uvsetqualityindex proc near
+;     push 0049f184h
+;     ret
 
-_uvsetqualityindex endp
+; _uvsetqualityindex endp
 
-_uvdecodedcblock proc near
-    push 0049f2a0h
-    ret
+; _uvdecodedcblock proc near
+;     push 0049f2a0h
+;     ret
 
-_uvdecodedcblock endp
+; _uvdecodedcblock endp
 
-_uvdecodeblock proc near
-    push 0049fb16h
-    ret
+; _uvdecodeblock proc near
+;     push 0049fb16h
+;     ret
 
-_uvdecodeblock endp
+; _uvdecodeblock endp
 
 _compactup proc near
     push 004a1080h
