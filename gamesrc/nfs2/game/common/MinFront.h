@@ -7,7 +7,7 @@
 extern "C" {
 #endif
 
-
+int* DEFAULT_CALL MinFront_ParseOptions(int argc, char** argv);
 
 #ifdef __cplusplus
 }

@@ -2,6 +2,11 @@
 #include <renfs2.h>
 #include <game/common/eacfile.h>
 
+// GLOBAL - 0002:0000ef24 _filedebugflag 004dbf24 (data)
+// LOCAL  - 00FA: MODULE_386 (type = 9)
+// GLOBAL: NFSW 0x004dbf24
+// int filedebugflag;
+
 // GLOBAL - 0002:0000ef28 _filemutex 004dbf28 (static pubdef) (data)
 // LOCAL  - 0094: MODULE_386 (type = 9)
 // GLOBAL: NFSW 0x004dbf28
@@ -337,11 +342,123 @@ GAME_FUNC int __cdecl writewinfile(int handle, char* buffer, int amount)
 }
 
 // GLOBAL - 0001:00048859 _seekwinfile 00449859 (code)
+// LOCAL  - 07C3: NEAR_RTN_386 (return type = 337) (EAX)
+// ARG 0  - 07E5: LOCAL (type = 9)
+// ARG 1  - 07F0: LOCAL (type = 9)
+// STUB: NFSW 0x00449859
+GAME_FUNC int __cdecl seekwinfile(int handle, int offset)
+{
+    // int drive; // 07FB: LOCAL (type = 9)
+    // int h; // 0805: LOCAL (type = 9)
+    // int success; // 080B: LOCAL (type = 9)
+    // int filesize; // 0817: LOCAL (type = 9)
+
+    CALL_CDECL_RESULT_2(int, 0x00449859,
+        int handle, int offset,
+        handle, offset
+    );
+}
+
 // GLOBAL - 0001:00048a02 _tellwinfile 00449a02 (code)
+// LOCAL  - 0824: NEAR_RTN_386 (return type = 371) (EAX)
+// ARG 0  - 0846: LOCAL (type = 9)
+// STUB: NFSW 0x00449a02
+GAME_FUNC int __cdecl tellwinfile(int handle)
+{
+    // int h; // 0851: LOCAL (type = 9)
+
+    CALL_CDECL_RESULT_1(int, 0x00449a02,
+        int handle,
+        handle
+    );
+}
+
 // GLOBAL - 0001:00048af2 _closewinfile 00449af2 (code)
+// LOCAL  - 0857: NEAR_RTN_386 (return type = 371) (EAX)
+// ARG 0  - 087A: LOCAL (type = 9)
+// STUB: NFSW 0x00449af2
+GAME_FUNC int __cdecl closewinfile(int handle)
+{
+    // int drive; // 0885: LOCAL (type = 9)
+    // int h; // 088F: LOCAL (type = 9)
+
+    CALL_CDECL_RESULT_1(int, 0x00449af2,
+        int handle,
+        handle
+    );
+}
+
 // GLOBAL - 0001:00048c98 _lockwinfile 00449c98 (code)
+// LOCAL  - 0895: NEAR_RTN_386 (return type = 371) (EAX)
+// ARG 0  - 08B7: LOCAL (type = 9)
+// STUB: NFSW 0x00449c98
+GAME_FUNC int __cdecl lockwinfile(int handle)
+{
+    // int h; // 08C2: LOCAL (type = 9)
+
+    CALL_CDECL_RESULT_1(int, 0x00449c98,
+        int handle,
+        handle
+    );
+}
+
 // GLOBAL - 0001:00048d11 _unlockwinfile 00449d11 (code)
+// LOCAL  - 08C8: NEAR_RTN_386 (return type = 371) (EAX)
+// ARG 0  - 08EC: LOCAL (type = 9)
+// STUB: NFSW 0x00449d11
+GAME_FUNC int __cdecl unlockwinfile(int handle)
+{
+    // int h; // 08F7: LOCAL (type = 9)
+
+    CALL_CDECL_RESULT_1(int, 0x00449d11,
+        int handle,
+        handle
+    );
+}
+
 // GLOBAL - 0001:00048d8f _addresswinfile 00449d8f (code)
+// LOCAL  - 08FD: NEAR_RTN_386 (return type = 372) (EAX)
+// ARG 0  - 0922: LOCAL (type = 9)
+// STUB: NFSW 0x00449d8f
+GAME_FUNC char* __cdecl addresswinfile(int handle)
+{
+    // int h; // 092D: LOCAL (type = 9)
+
+    CALL_CDECL_RESULT_1(char*, 0x00449d8f,
+        int handle,
+        handle
+    );
+}
+
 // GLOBAL - 0001:00048e13 _mirrorwinfile 00449e13 (code)
+// LOCAL  - 0948: NEAR_RTN_386 (return type = 337) (EAX)
+// ARG 0  - 096C: LOCAL (type = 9)
+// ARG 1  - 0977: LOCAL (type = 9)
+// STUB: NFSW 0x00449e13
+GAME_FUNC int __cdecl mirrorwinfile(int handle, int active)
+{
+    // 0933: BLOCK_386 (parent = 0948) (addr = 00449E29)
+    // int prev; // 093F: LOCAL (type = 9)
+
+    CALL_CDECL_RESULT_2(int, 0x00449e13,
+        int handle, int active,
+        handle, active
+    );
+}
+
 // GLOBAL - 0001:00048e77 _setendoffile 00449e77 (code)
-// GLOBAL - 0002:0000ef24 _filedebugflag 004dbf24 (data)
+// LOCAL  - 0982: NEAR_RTN_386 (return type = 337) (EAX)
+// ARG 0  - 09A5: LOCAL (type = 9)
+// ARG 1  - 09B0: LOCAL (type = 9)
+// STUB: NFSW 0x00449e77
+GAME_FUNC int __cdecl setendoffile(int handle, int length)
+{
+    // int ret; // 09BB: LOCAL (type = 9)
+    // int drive; // 09C3: LOCAL (type = 9)
+    // int h; // 09CD: LOCAL  (type = 9)
+
+    CALL_CDECL_RESULT_2(int, 0x00449e77,
+        int handle, int length,
+        handle, length
+    );
+}

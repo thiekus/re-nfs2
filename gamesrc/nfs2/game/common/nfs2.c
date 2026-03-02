@@ -1,6 +1,8 @@
 
 #include <renfs2.h>
+#include <eac.h>
 #include <game/common/nfs2.h>
+#include <game/common/MinFront.h>
 #include <frontend/common/Front.h>
 #include <game/pc/platform.h>
 
@@ -190,7 +192,7 @@ GAME_FUNC void DEFAULT_CALL main(int argc, char* argv[])
             nResult = Front_MainMenu();
         }
         if (nResult != 0) {
-            // MinFront_ParseOptions();
+            MinFront_ParseOptions(argc, argv);
             // Front_BuildStream();
             // gGameSetupIsUnstable = 0;
             // Nfs2_GameModuleStartup();
@@ -235,7 +237,7 @@ GAME_FUNC void DEFAULT_CALL main(int argc, char* argv[])
             // }
         }
     }
-    // delasync();
+    delasync();
     // Audio_UnCacheMusic();
     Nfs2_SystemNLibCleanUp();
 }
