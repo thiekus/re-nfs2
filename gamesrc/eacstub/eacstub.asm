@@ -122,19 +122,19 @@ PUBLIC _initkey
 PUBLIC _restorekey
 PUBLIC _purgekey
 PUBLIC _nextkey
-PUBLIC _blockmove
-PUBLIC _filesize
-PUBLIC _filesizez
-PUBLIC _filesizea
-PUBLIC _initfileio
-PUBLIC _openhandlea
-PUBLIC _openhandle
-PUBLIC _openhandlez
-PUBLIC _openhandlew
-PUBLIC _closehandle
-PUBLIC _readhandle
-PUBLIC _writehandle
-PUBLIC _seekhandle
+; PUBLIC _blockmove
+; PUBLIC _filesize
+; PUBLIC _filesizez
+; PUBLIC _filesizea
+; PUBLIC _initfileio
+; PUBLIC _openhandlea
+; PUBLIC _openhandle
+; PUBLIC _openhandlez
+; PUBLIC _openhandlew
+; PUBLIC _closehandle
+; PUBLIC _readhandle
+; PUBLIC _writehandle
+; PUBLIC _seekhandle
 PUBLIC _keystate
 PUBLIC _shapecount
 PUBLIC _shapepointer
