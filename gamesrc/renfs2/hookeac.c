@@ -16,6 +16,9 @@ int doRegisterEACHook(void* hookMgr, func_AddHookCallback cbAddHook)
     ADD_FUNC_HOOK("galloc_", 0x00484d10);
     ADD_FUNC_HOOK("gfree_", 0x00484de4);
 
+    // Module index 180 (win\obja\dprintf.obj)
+    ADD_FUNC_HOOK("_dprintf", 0x0048a3e0);
+
     // Module index 260 (win\obja\uv.obj) and 261 (win\uva.asm)
     // ADD_FUNC_HOOK("_uvinitvideodecoder", 0x0049f038);
     ADD_FUNC_HOOK("_uvsetqualityindex", 0x0049f184);
