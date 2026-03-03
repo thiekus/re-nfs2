@@ -8,6 +8,7 @@ extern "C" {
 #endif
 
 int DEFAULT_CALL Front_MainMenu();
+int* DEFAULT_CALL Front_BuildStream(int* stream);
 
 #ifdef __cplusplus
 }
