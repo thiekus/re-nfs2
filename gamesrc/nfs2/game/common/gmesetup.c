@@ -25,8 +25,9 @@
 // GLOBAL - 0001:0002971a GameSetup_StartUp_ 0042a71a (code)
 // LOCAL  - 0064: NEAR_RTN_386 (return type = 66) (none)
 // ARG 0  - 008C: LOCAL (type = 42) (EAX)
+GAME_FUNC
 // STUB: NFSW 0x0042a71a
-GAME_FUNC void DEFAULT_CALL GameSetup_StartUp(int* FrontEndDataStream)
+void DEFAULT_CALL GameSetup_StartUp(int* FrontEndDataStream)
 {
     // int i; // 00A3: LOCAL (type = 9)
     // int* h; // 00A9: LOCAL (type = 42)
@@ -43,8 +44,9 @@ GAME_FUNC void DEFAULT_CALL GameSetup_StartUp(int* FrontEndDataStream)
 
 // GLOBAL - 0001:000299b4 GameSetup_CleanUp_ 0042a9b4 (code)
 // LOCAL  - 00C7: NEAR_RTN_386 (return type = 23) (none)
+GAME_FUNC
 // STUB: NFSW 0x0042a9b4
-GAME_FUNC void DEFAULT_CALL GameSetup_CleanUp(void)
+void DEFAULT_CALL GameSetup_CleanUp(void)
 {
     CALL_WATCALL_VOID_0(0x0042a9b4);
 }

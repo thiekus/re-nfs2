@@ -8,7 +8,7 @@
 extern "C" {
 #endif
 
-void DEFAULT_CALL nfs2_main(int argc, char* argv[], void* setup);
+void DEFAULT_CALL Nfs2_GameModuleStartUp(int* FrontEndDataStream);
 
 #ifdef __cplusplus
 }

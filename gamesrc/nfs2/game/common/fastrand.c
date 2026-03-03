@@ -24,8 +24,9 @@
 
 // GLOBAL - 0001:00028f76 FastRandom_CleanUp_ 00429f76 (code)
 // LOCAL  - 0052: NEAR_RTN_386 (return type = 12) (none)
+GAME_FUNC
 // STUB: NFSW 0x00429f76
-GAME_FUNC void DEFAULT_CALL FastRandom_CleanUp(void)
+void DEFAULT_CALL FastRandom_CleanUp(void)
 {
     CALL_WATCALL_VOID_0(0x00429f76);
 }
@@ -33,8 +34,9 @@ GAME_FUNC void DEFAULT_CALL FastRandom_CleanUp(void)
 // GLOBAL - 0001:00028f8b FastRandom_StartUp_ 00429f8b (code)
 // LOCAL  - 0079: NEAR_RTN_386 (return type = 13) (none)
 // ARG 0  - 00A2: LOCAL (type = 10) (EAX)
+GAME_FUNC
 // STUB: NFSW 0x00429f8b
-GAME_FUNC void DEFAULT_CALL FastRandom_StartUp(unsigned int seeder)
+void DEFAULT_CALL FastRandom_StartUp(unsigned int seeder)
 {
     // unsigned int a; // 00AD: LOCAL (type = 10)
     // unsigned int b; // 00B3: LOCAL (type = 10)

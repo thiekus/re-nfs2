@@ -69,8 +69,9 @@
 
 // GLOBAL - 0001:00046fe4 _mirrorthreadfunc 00447fe4 (static pubdef) (code)
 // LOCAL  - 0164: NEAR_RTN_386 (return type = 340) (none)
+GAME_FUNC
 // STUB: NFSW 0x00447fe4
-GAME_FUNC void __cdecl mirrorthreadfunc(void)
+void __cdecl mirrorthreadfunc(void)
 {
     // int byteoffset; // 018A: LOCAL (type = 9)
     // int blockmask; // 0199: LOCAL (type = 9)
@@ -93,8 +94,9 @@ GAME_FUNC void __cdecl mirrorthreadfunc(void)
 // GLOBAL - 0001:00047287 IsDirSep_ 00448287 (static pubdef) (code)
 // LOCAL  - 01D3: NEAR_RTN_386 (type = 350) (EAX)
 // ARG 0  - 01F4: LOCAL (type = 4)
+GAME_FUNC
 // STUB: NFSW 0x00448287
-GAME_FUNC int DEFAULT_CALL IsDirSep(char ch)
+int DEFAULT_CALL IsDirSep(char ch)
 {
     CALL_WATCALL_RESULT_1(int, 0x00448287,
         char ch,
@@ -106,8 +108,9 @@ GAME_FUNC int DEFAULT_CALL IsDirSep(char ch)
 // LOCAL  - 01FB: NEAR_RTN_386 (return type = 351) (none)
 // ARG 0  - 021F: LOCAL (type = 13) (EAX)
 // ARG 1  - 0228: LOCAL (type = 13) (EDX)
+GAME_FUNC
 // STUB: NFSW 0x004482c6
-GAME_FUNC void DEFAULT_CALL wingetroot(char* path, char* root)
+void DEFAULT_CALL wingetroot(char* path, char* root)
 {
     // char* p; // 0231: LOCAL (type = 13)
 
@@ -122,8 +125,9 @@ GAME_FUNC void DEFAULT_CALL wingetroot(char* path, char* root)
 // ARG 0  - 027D: LOCAL (type = 13) (EAX)
 // ARG 1  - 0288: LOCAL (type = 13) (EDX)
 // ARG 2  - 0294: LOCAL (type = 9) (EBX)
+GAME_FUNC
 // STUB: NFSW 0x004483d0
-GAME_FUNC int DEFAULT_CALL winfullpath(char* filein, char* pathout, int maxlen)
+int DEFAULT_CALL winfullpath(char* filein, char* pathout, int maxlen)
 {
     // char* filepart; // 029F: LOCAL (type = 13)
     // char root[4]; // 02AC: LOCAL (type = 362)
@@ -142,8 +146,9 @@ GAME_FUNC int DEFAULT_CALL winfullpath(char* filein, char* pathout, int maxlen)
 
 // GLOBAL - 0001:000474e3 _getdrivemap 004484e3 (code)
 // LOCAL  - 02CF: NEAR_RTN_386 (return type = 334) (EAX)
+GAME_FUNC
 // STUB: NFSW 0x004484e3
-GAME_FUNC int __cdecl getdrivemap(void)
+int __cdecl getdrivemap(void)
 {
     CALL_CDECL_RESULT_0(int, 0x004484e3);
 }
@@ -152,8 +157,9 @@ GAME_FUNC int __cdecl getdrivemap(void)
 // LOCAL  - 02F1: NEAR_RTN_386 (return type = 363) (EAX)
 // ARG 0  - 0314: LOCAL (type = 13)
 // ARG 1  - 031D: LOCAL (type = 13)
+GAME_FUNC
 // STUB: NFSW 0x00448503
-GAME_FUNC int __cdecl getdrivename(char* name, char* drivename)
+int __cdecl getdrivename(char* name, char* drivename)
 {
     // char* temp; // 032B: LOCAL (type = 13)
     // char* p; // 0334: LOCAL (type = 13)
@@ -170,8 +176,9 @@ GAME_FUNC int __cdecl getdrivename(char* name, char* drivename)
 // GLOBAL - 0001:00047616 _setdirectory 00448616 (code)
 // LOCAL  - 0351: NEAR_RTN_386 (return type = 364) (none)
 // ARG 0  - 0373: LOCAL (type = 13)
+GAME_FUNC
 // STUB: NFSW 0x00448616
-GAME_FUNC void __cdecl setdirectory(char* path)
+void __cdecl setdirectory(char* path)
 {
     CALL_CDECL_VOID_1(0x00448616,
         char* path,
@@ -182,8 +189,9 @@ GAME_FUNC void __cdecl setdirectory(char* path)
 // GLOBAL - 0001:0004765c _getdirectory 0044865c (code)
 // LOCAL  - 037C: NEAR_RTN_386 (return type = 364) (none)
 // ARG 0  - 039E: LOCAL (type = 13)
+GAME_FUNC
 // STUB: NFSW 0x0044865c
-GAME_FUNC void __cdecl getdirectory(char* path)
+void __cdecl getdirectory(char* path)
 {
     // DWORD len; // 03A7: LOCAL (type = 27)
 
@@ -195,8 +203,9 @@ GAME_FUNC void __cdecl getdirectory(char* path)
 
 // GLOBAL - 0001:000476b7 _iswinfilesinited 004486b7 (code)
 // LOCAL  - 03AF: NEAR_RTN_386 (return type = 334) (EAX)
+GAME_FUNC
 // STUB: NFSW 0x004486b7
-GAME_FUNC int __cdecl iswinfilesinited(void)
+int __cdecl iswinfilesinited(void)
 {
     CALL_CDECL_RESULT_0(int, 0x004486b7);
 }
@@ -204,8 +213,9 @@ GAME_FUNC int __cdecl iswinfilesinited(void)
 // GLOBAL - 0001:000476ec _initwinfiles 004486ec (code)
 // LOCAL  - 03D6: NEAR_RTN_386 (return type = 365) (none)
 // ARG 0  - 03F8: LOCAL (type = 9)
+GAME_FUNC
 // STUB: NFSW 0x004486ec
-GAME_FUNC void __cdecl initwinfiles(int maxfiles)
+void __cdecl initwinfiles(int maxfiles)
 {
     CALL_CDECL_VOID_1(0x004486ec,
         int maxfiles,
@@ -215,8 +225,9 @@ GAME_FUNC void __cdecl initwinfiles(int maxfiles)
 
 // GLOBAL - 0001:00047791 _restorewinfiles 00448791 (code)
 // LOCAL  - 0417: NEAR_RTN_386 (return type = 340) (none)
+GAME_FUNC
 // STUB: NFSW 0x00448791
-GAME_FUNC void __cdecl restorewinfiles(void)
+void __cdecl restorewinfiles(void)
 {
     // 0405: BLOCK_386 (parent = 0417) (addr = 004487AA)
     // int i; // 0411: LOCAL (type = 9)
@@ -230,8 +241,9 @@ GAME_FUNC void __cdecl restorewinfiles(void)
 // ARG 1  - 0494: LOCAL (type = 9)
 // ARG 2  - 04A2: LOCAL (type = 9)
 // ARG 3  - 04B3: LOCAL (type = 41)
+GAME_FUNC
 // STUB: NFSW 0x0044887c
-GAME_FUNC int __cdecl openwinfile(char* name, int modeflags, int reqblocksize, int* handle)
+int __cdecl openwinfile(char* name, int modeflags, int reqblocksize, int* handle)
 {
     // int h; // 04BE: LOCAL (type = 9)
     // int drive; // 04C4: LOCAL (type = 9)
@@ -263,8 +275,9 @@ GAME_FUNC int __cdecl openwinfile(char* name, int modeflags, int reqblocksize, i
 // ARG 2  - 05B0: LOCAL (type = 41)
 // ARG 3  - 05BE: LOCAL (type = 41)
 // ARG 4  - 05CB: LOCAL (type = 41)
+GAME_FUNC
 // STUB: NFSW 0x00448f54
-GAME_FUNC int __cdecl infowinfile(int handle, int* modeflags, int* blocksize, int* filesize, int* freespace)
+int __cdecl infowinfile(int handle, int* modeflags, int* blocksize, int* filesize, int* freespace)
 {
     // DWORD sectors; // 05D9: LOCAL (type = 27)
     // DWORD bytes; // 05E5: LOCAL (type = 27)
@@ -288,8 +301,9 @@ GAME_FUNC int __cdecl infowinfile(int handle, int* modeflags, int* blocksize, in
 // ARG 0  - 06BB: LOCAL (type = 9)
 // ARG 1  - 06C6: LOCAL (type = 13)
 // ARG 2  - 06D1: LOCAL (type = 9)
+GAME_FUNC
 // STUB: NFSW 0x004490bd
-GAME_FUNC int __cdecl readwinfile(int handle, char* buffer, int amount)
+int __cdecl readwinfile(int handle, char* buffer, int amount)
 {
     // DWORD bytesread; // 06DC: LOCAL (type = 27)
     // DWORD blksize; // 06EA: LOCAL (type = 27)
@@ -322,8 +336,9 @@ GAME_FUNC int __cdecl readwinfile(int handle, char* buffer, int amount)
 // ARG 0  - 0759: LOCAL (type = 9)
 // ARG 1  - 0764: LOCAL (type = 13)
 // ARG 2  - 076F: LOCAL (type = 9)
+GAME_FUNC
 // STUB: NFSW 0x0044958b
-GAME_FUNC int __cdecl writewinfile(int handle, char* buffer, int amount)
+int __cdecl writewinfile(int handle, char* buffer, int amount)
 {
     // DWORD byteswritten; // 077A: LOCAL (type = 27)
     // DWORD blksize; // 078B: LOCAL (type = 27)
@@ -345,8 +360,9 @@ GAME_FUNC int __cdecl writewinfile(int handle, char* buffer, int amount)
 // LOCAL  - 07C3: NEAR_RTN_386 (return type = 337) (EAX)
 // ARG 0  - 07E5: LOCAL (type = 9)
 // ARG 1  - 07F0: LOCAL (type = 9)
+GAME_FUNC
 // STUB: NFSW 0x00449859
-GAME_FUNC int __cdecl seekwinfile(int handle, int offset)
+int __cdecl seekwinfile(int handle, int offset)
 {
     // int drive; // 07FB: LOCAL (type = 9)
     // int h; // 0805: LOCAL (type = 9)
@@ -362,8 +378,9 @@ GAME_FUNC int __cdecl seekwinfile(int handle, int offset)
 // GLOBAL - 0001:00048a02 _tellwinfile 00449a02 (code)
 // LOCAL  - 0824: NEAR_RTN_386 (return type = 371) (EAX)
 // ARG 0  - 0846: LOCAL (type = 9)
+GAME_FUNC
 // STUB: NFSW 0x00449a02
-GAME_FUNC int __cdecl tellwinfile(int handle)
+int __cdecl tellwinfile(int handle)
 {
     // int h; // 0851: LOCAL (type = 9)
 
@@ -376,8 +393,9 @@ GAME_FUNC int __cdecl tellwinfile(int handle)
 // GLOBAL - 0001:00048af2 _closewinfile 00449af2 (code)
 // LOCAL  - 0857: NEAR_RTN_386 (return type = 371) (EAX)
 // ARG 0  - 087A: LOCAL (type = 9)
+GAME_FUNC
 // STUB: NFSW 0x00449af2
-GAME_FUNC int __cdecl closewinfile(int handle)
+int __cdecl closewinfile(int handle)
 {
     // int drive; // 0885: LOCAL (type = 9)
     // int h; // 088F: LOCAL (type = 9)
@@ -391,8 +409,9 @@ GAME_FUNC int __cdecl closewinfile(int handle)
 // GLOBAL - 0001:00048c98 _lockwinfile 00449c98 (code)
 // LOCAL  - 0895: NEAR_RTN_386 (return type = 371) (EAX)
 // ARG 0  - 08B7: LOCAL (type = 9)
+GAME_FUNC
 // STUB: NFSW 0x00449c98
-GAME_FUNC int __cdecl lockwinfile(int handle)
+int __cdecl lockwinfile(int handle)
 {
     // int h; // 08C2: LOCAL (type = 9)
 
@@ -405,8 +424,9 @@ GAME_FUNC int __cdecl lockwinfile(int handle)
 // GLOBAL - 0001:00048d11 _unlockwinfile 00449d11 (code)
 // LOCAL  - 08C8: NEAR_RTN_386 (return type = 371) (EAX)
 // ARG 0  - 08EC: LOCAL (type = 9)
+GAME_FUNC
 // STUB: NFSW 0x00449d11
-GAME_FUNC int __cdecl unlockwinfile(int handle)
+int __cdecl unlockwinfile(int handle)
 {
     // int h; // 08F7: LOCAL (type = 9)
 
@@ -419,8 +439,9 @@ GAME_FUNC int __cdecl unlockwinfile(int handle)
 // GLOBAL - 0001:00048d8f _addresswinfile 00449d8f (code)
 // LOCAL  - 08FD: NEAR_RTN_386 (return type = 372) (EAX)
 // ARG 0  - 0922: LOCAL (type = 9)
+GAME_FUNC
 // STUB: NFSW 0x00449d8f
-GAME_FUNC char* __cdecl addresswinfile(int handle)
+char* __cdecl addresswinfile(int handle)
 {
     // int h; // 092D: LOCAL (type = 9)
 
@@ -434,8 +455,9 @@ GAME_FUNC char* __cdecl addresswinfile(int handle)
 // LOCAL  - 0948: NEAR_RTN_386 (return type = 337) (EAX)
 // ARG 0  - 096C: LOCAL (type = 9)
 // ARG 1  - 0977: LOCAL (type = 9)
+GAME_FUNC
 // STUB: NFSW 0x00449e13
-GAME_FUNC int __cdecl mirrorwinfile(int handle, int active)
+int __cdecl mirrorwinfile(int handle, int active)
 {
     // 0933: BLOCK_386 (parent = 0948) (addr = 00449E29)
     // int prev; // 093F: LOCAL (type = 9)
@@ -450,8 +472,9 @@ GAME_FUNC int __cdecl mirrorwinfile(int handle, int active)
 // LOCAL  - 0982: NEAR_RTN_386 (return type = 337) (EAX)
 // ARG 0  - 09A5: LOCAL (type = 9)
 // ARG 1  - 09B0: LOCAL (type = 9)
+GAME_FUNC
 // STUB: NFSW 0x00449e77
-GAME_FUNC int __cdecl setendoffile(int handle, int length)
+int __cdecl setendoffile(int handle, int length)
 {
     // int ret; // 09BB: LOCAL (type = 9)
     // int drive; // 09C3: LOCAL (type = 9)

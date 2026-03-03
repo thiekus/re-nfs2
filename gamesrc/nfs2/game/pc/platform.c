@@ -10,8 +10,9 @@
 // GLOBAL - 0001:0005d763 Platform_AllocateTm_ 0045e763 (code)
 // LOCAL  - 001E: NEAR_RTN_386 (return type = 371) (EAX)
 // ARG 0  - 004A: LOCAL (type = 370) (EAX)
+GAME_FUNC
 // STUB: NFSW 0x0045e763
-GAME_FUNC char* DEFAULT_CALL Platform_AllocateTm(int* s)
+char* DEFAULT_CALL Platform_AllocateTm(int* s)
 {
     CALL_WATCALL_RESULT_1(char*, 0x0045e763,
         int* s,
@@ -22,8 +23,9 @@ GAME_FUNC char* DEFAULT_CALL Platform_AllocateTm(int* s)
 // GLOBAL - 0001:0005d7b5 Platform_FreeTm_ 0045e7b5 (code)
 // LOCAL  - 0051: NEAR_RTN_386 (return type = 372) (none)
 // ARG 0  - 0078: LOCAL (type = 12) (EAX)
+GAME_FUNC
 // STUB: NFSW 0x0045e7b5
-GAME_FUNC void DEFAULT_CALL Platform_FreeTm(char* p)
+void DEFAULT_CALL Platform_FreeTm(char* p)
 {
     CALL_WATCALL_VOID_1(0x0045e7b5,
         char* p,
@@ -33,48 +35,54 @@ GAME_FUNC void DEFAULT_CALL Platform_FreeTm(char* p)
 
 // GLOBAL - 0001:0005d7db Platform_FreeMPause_ 0045e7db (code)
 // LOCAL  - 007E: NEAR_RTN_386 (return type = 335) (none)
+GAME_FUNC
 // STUB: NFSW 0x0045e7db
-GAME_FUNC void DEFAULT_CALL Platform_FreeMPause(void)
+void DEFAULT_CALL Platform_FreeMPause(void)
 {
     CALL_WATCALL_VOID_0(0x0045e7db);
 }
 
 // GLOBAL - 0001:0005d7f0 Platform_ReAllocateMPause_ 0045e7f0 (code)
 // LOCAL  - 00A7: NEAR_RTN_386 (return type = 335) (none)
+GAME_FUNC
 // STUB: NFSW 0x0045e7f0
-GAME_FUNC void DEFAULT_CALL Platform_ReAllocateMPause(void)
+void DEFAULT_CALL Platform_ReAllocateMPause(void)
 {
     CALL_WATCALL_VOID_0(0x0045e7f0);
 }
 
 // GLOBAL - 0001:0005d805 Platform_SysStartUp_ 0045e805 (code)
 // LOCAL  - 00D6: NEAR_RTN_386 (return type = 335) (none)
+GAME_FUNC
 // STUB: NFSW 0x0045e805
-GAME_FUNC void DEFAULT_CALL Platform_SysStartUp(void)
+void DEFAULT_CALL Platform_SysStartUp(void)
 {
     CALL_WATCALL_VOID_0(0x0045e805);
 }
 
 // GLOBAL - 0001:0005d8f2 Platform_SysCleanUp_ 0045e8f2 (code)
 // LOCAL  - 00FF: NEAR_RTN_386 (return type = 335) (none)
+GAME_FUNC
 // STUB: NFSW 0x0045e8f2
-GAME_FUNC void DEFAULT_CALL Platform_SysCleanUp(void)
+void DEFAULT_CALL Platform_SysCleanUp(void)
 {
     CALL_WATCALL_VOID_0(0x0045e8f2);
 }
 
 // GLOBAL - 0001:0005d938 Platform_DebuggerPollHost_ 0045e938 (code)
 // LOCAL  - 0128: NEAR_RTN_386 (return type = 335) (none)
+GAME_FUNC
 // STUB: NFSW 0x0045e938
-GAME_FUNC void DEFAULT_CALL Platform_DebuggerPollHost(void)
+void DEFAULT_CALL Platform_DebuggerPollHost(void)
 {
     CALL_WATCALL_VOID_0(0x0045e938);
 }
 
 // GLOBAL - 0001:0005d94d Platform_VerifyCD_ 0045e94d (code)
 // LOCAL  - 0157: NEAR_RTN_386 (return type = 335) (none)
+GAME_FUNC
 // STUB: NFSW 0x0045e94d
-GAME_FUNC void DEFAULT_CALL Platform_VerifyCD(void)
+void DEFAULT_CALL Platform_VerifyCD(void)
 {
     CALL_WATCALL_VOID_0(0x0045e94d);
 }

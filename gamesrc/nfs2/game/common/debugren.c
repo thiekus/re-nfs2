@@ -32,8 +32,9 @@ typedef struct DRender_tFacet{int fakeValue;} DRender_tFacet;
 // ARG 1  - 008D: LOCAL (type = 85) (EDX)
 // ARG 2  - 0096: LOCAL (type = 85) (EBX)
 // ARG 3  - 009F: LOCAL (type = 9) (ECX)
+GAME_FUNC
 // STUB: NFSW 0x00429ea2
-GAME_FUNC void DEFAULT_CALL Debugren_TestFacet(DRender_tView* Vi, DRender_tFacet** head, DRender_tFacet** tail, int lenght)
+void DEFAULT_CALL Debugren_TestFacet(DRender_tView* Vi, DRender_tFacet** head, DRender_tFacet** tail, int lenght)
 {
     // DRender_tFacet3D* f; // 00AA: LOCAL (type = 87)
     // DRender_tListfacet result; // 00B0: LOCAL (type = 90)

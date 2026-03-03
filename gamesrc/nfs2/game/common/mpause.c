@@ -49,8 +49,9 @@
 
 // GLOBAL - 0001:0002915e MPause_Logic_ 0042a15e (code)
 // LOCAL  - 0103: NEAR_RTN_386 (return type = 69) (EAX)
+GAME_FUNC
 // STUB: NFSW 0x0042a15e
-GAME_FUNC int DEFAULT_CALL MPause_Logic(void)
+int DEFAULT_CALL MPause_Logic(void)
 {
     // 00DD: BLOCK_386 (parent = 0103) (addr = 0042A2E2)
     // int sv; // 00E9: LOCAL (type = 9)
@@ -63,16 +64,18 @@ GAME_FUNC int DEFAULT_CALL MPause_Logic(void)
 
 // GLOBAL - 0001:0002959b MPause_Render_ 0042a59b (code)
 // LOCAL  - 0125: NEAR_RTN_386 (return type = 21) (none)
+GAME_FUNC
 // STUB: NFSW 0x0042a59b
-GAME_FUNC void DEFAULT_CALL MPause_Render(void)
+void DEFAULT_CALL MPause_Render(void)
 {
     CALL_WATCALL_VOID_0(0x0042a59b);
 }
 
 // GLOBAL - 0001:000295b5 MPause_InitMPause_ 0042a5b5 (code)
 // LOCAL  - 0147: NEAR_RTN_386 (return type = 21) (none)
+GAME_FUNC
 // STUB: NFSW 0x0042a5b5
-GAME_FUNC void DEFAULT_CALL MPause_InitMPause(void)
+void DEFAULT_CALL MPause_InitMPause(void)
 {
     // char name[255]; // 016D: LOCAL (type = 70)
     // int language; // 0177: LOCAL (type = 9)
@@ -83,8 +86,9 @@ GAME_FUNC void DEFAULT_CALL MPause_InitMPause(void)
 
 // GLOBAL - 0001:000296f7 MPause_KillMPause_ 0042a6f7 (code)
 // LOCAL  - 0191: NEAR_RTN_386 (return type = 21) (none)
+GAME_FUNC
 // STUB: NFSW 0x0042a6f7
-GAME_FUNC void DEFAULT_CALL MPause_KillMPause(void)
+void DEFAULT_CALL MPause_KillMPause(void)
 {
     CALL_WATCALL_VOID_0(0x0042a6f7);
 }

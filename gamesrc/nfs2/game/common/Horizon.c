@@ -46,8 +46,9 @@ typedef struct DRender_tListfacet{int fakeValue;} DRender_tListfacet;
 // ARG 2  - 00BD: LOCAL (type = 9) (EBX)
 // ARG 3  - 00C3: LOCAL (type = 43) (ECX)
 // ARG 4  - 00C9: LOCAL (type = 43)
+GAME_FUNC
 // STUB: NFSW 0x0042a9e1
-GAME_FUNC void DEFAULT_CALL Horizon_TransformVertex(MATRIX3DT* m, LIBCOORD* t, int n, LIBCOORD* s, LIBCOORD* v)
+void DEFAULT_CALL Horizon_TransformVertex(MATRIX3DT* m, LIBCOORD* t, int n, LIBCOORD* s, LIBCOORD* v)
 {
     // int i; // 00CF: LOCAL (type = 9)
 
@@ -63,8 +64,9 @@ GAME_FUNC void DEFAULT_CALL Horizon_TransformVertex(MATRIX3DT* m, LIBCOORD* t, i
 // ARG 1  - 0111: LOCAL (type = 9) (EDX)
 // ARG 2  - 0117: LOCAL (type = 43) (EBX)
 // ARG 3  - 011D: LOCAL (type = 43) (ECX)
+GAME_FUNC
 // STUB: NFSW 0x0042aa5f
-GAME_FUNC void DEFAULT_CALL Horizon_TransformHorizon(DRender_tView* Vi, int n, LIBCOORD* s, LIBCOORD* v)
+void DEFAULT_CALL Horizon_TransformHorizon(DRender_tView* Vi, int n, LIBCOORD* s, LIBCOORD* v)
 {
     // LIBCOORD translation; // 0123: LOCAL (type = 42)
     // LIBCOORD tmp; // 0133: LOCAL (type = 42)
@@ -81,8 +83,9 @@ GAME_FUNC void DEFAULT_CALL Horizon_TransformHorizon(DRender_tView* Vi, int n, L
 // ARG 1  - 0173: LOCAL (type = 43) (EDX)
 // ARG 2  - 0179: LOCAL (type = 61) (EBX)
 // ARG 3  - 0180: LOCAL (type = 61) (ECX)
+GAME_FUNC
 // STUB: NFSW 0x0042aac1
-GAME_FUNC void DEFAULT_CALL Horizon_ProjectVertex(int n, LIBCOORD* v, SCOORD* sp, SCOORD* tran)
+void DEFAULT_CALL Horizon_ProjectVertex(int n, LIBCOORD* v, SCOORD* sp, SCOORD* tran)
 {
     // int i; // 0189: LOCAL (type = 9)
 
@@ -95,8 +98,9 @@ GAME_FUNC void DEFAULT_CALL Horizon_ProjectVertex(int n, LIBCOORD* v, SCOORD* sp
 // GLOBAL - 0001:00029b64 Horizon_QuadInView_ 0042ab64 (code)
 // LOCAL  - 018F: NEAR_RTN_386 (return type = 63) (EAX)
 // ARG 0  - 01B9: LOCAL (type = 61) (EAX)
+GAME_FUNC
 // STUB: NFSW 0x0042ab64
-GAME_FUNC int DEFAULT_CALL Horizon_QuadInView(SCOORD* mpts)
+int DEFAULT_CALL Horizon_QuadInView(SCOORD* mpts)
 {
     CALL_WATCALL_RESULT_1(int, 0x0042ab64,
         SCOORD* mpts,
@@ -106,16 +110,18 @@ GAME_FUNC int DEFAULT_CALL Horizon_QuadInView(SCOORD* mpts)
 
 // GLOBAL - 0001:00029ca8 Horizon_InitHorizon_ 0042aca8 (code)
 // LOCAL  - 01C2: NEAR_RTN_386 (return type = 23) (none)
+GAME_FUNC
 // STUB: NFSW 0x0042aca8
-GAME_FUNC void DEFAULT_CALL Horizon_InitHorizon(void)
+void DEFAULT_CALL Horizon_InitHorizon(void)
 {
     CALL_WATCALL_VOID_0(0x0042aca8);
 }
 
 // GLOBAL - 0001:00029cc2 Horizon_KillHorizon_ 0042acc2 (code)
 // LOCAL  - 01EA: NEAR_RTN_386 (return type = 23) (none)
+GAME_FUNC
 // STUB: NFSW 0x0042acc2
-GAME_FUNC void DEFAULT_CALL Horizon_KillHorizon(void)
+void DEFAULT_CALL Horizon_KillHorizon(void)
 {
     CALL_WATCALL_VOID_0(0x0042acc2);
 }
@@ -128,8 +134,9 @@ GAME_FUNC void DEFAULT_CALL Horizon_KillHorizon(void)
 // ARG 3  - 0274: LOCAL (type = 64) (ECX)
 // ARG 4  - 0283: LOCAL (type = 9)
 // ARG 5  - 0289: LOCAL (type = 9)
+GAME_FUNC
 // STUB: NFSW 0x0042acdc
-GAME_FUNC void DEFAULT_CALL Horizon_InterpolateLineSCoords(SCOORD* sc, SCOORD* s0, SCOORD* s1, int* percentage, int n, int bPercentageArray)
+void DEFAULT_CALL Horizon_InterpolateLineSCoords(SCOORD* sc, SCOORD* s0, SCOORD* s1, int* percentage, int n, int bPercentageArray)
 {
     // int i; // 029E: LOCAL (type = 9)
 
@@ -145,8 +152,9 @@ GAME_FUNC void DEFAULT_CALL Horizon_InterpolateLineSCoords(SCOORD* sc, SCOORD* s
 // GLOBAL - 0001:00029e28 Horizon_BuildHorizon_ 0042ae28 (code)
 // LOCAL  - 02A4: NEAR_RTN_386 (return type = 74) (ESI)
 // ARG 0  - 02D0: LOCAL (type = 56) (EAX)
+GAME_FUNC
 // STUB: NFSW 0x0042ae28
-GAME_FUNC DRender_tListfacet DEFAULT_CALL Horizon_BuildHorizon(DRender_tView* Vi)
+DRender_tListfacet DEFAULT_CALL Horizon_BuildHorizon(DRender_tView* Vi)
 {
     CALL_WATCALL_RESULT_1(DRender_tListfacet, 0x0042ae28,
         DRender_tView* Vi,

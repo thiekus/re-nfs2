@@ -32,8 +32,9 @@ typedef struct Car_tObj{int fakeValue;} Car_tObj;
 
 // GLOBAL - 0001:0000a0a9 AISpeeds_SetupSpeeds_ 0040b0a9 (code)
 // LOCAL  - 0091: NEAR_RTN_386 (return type = 21) (none)
+GAME_FUNC
 // STUB: NFSW 0x0040b0a9
-GAME_FUNC void DEFAULT_CALL AISpeeds_SetupSpeeds(void)
+void DEFAULT_CALL AISpeeds_SetupSpeeds(void)
 {
     // long offset; // 00BA: LOCAL (type = 16)
     // long fsize; // 00C5: LOCAL (type = 16)
@@ -49,8 +50,9 @@ GAME_FUNC void DEFAULT_CALL AISpeeds_SetupSpeeds(void)
 
 // GLOBAL - 0001:0000a221 AISpeeds_ScaleSpeeds_ 0040b221 (code)
 // LOCAL  - 016E: NEAR_RTN_386 (return type = 21) (none)
+GAME_FUNC
 // STUB: NFSW 0x0040b221
-GAME_FUNC void DEFAULT_CALL AISpeeds_ScaleSpeeds(void)
+void DEFAULT_CALL AISpeeds_ScaleSpeeds(void)
 {
     // 0151: BLOCK_386 (parent = 016E) (addr = 0040B231)
     // int l; // 015D: LOCAL (type = 9)
@@ -65,32 +67,36 @@ GAME_FUNC void DEFAULT_CALL AISpeeds_ScaleSpeeds(void)
 
 // GLOBAL - 0001:0000a2a7 AISpeeds_StartUp_ 0040b2a7 (code)
 // LOCAL  - 0197: NEAR_RTN_386 (return type = 21) (none)
+GAME_FUNC
 // STUB: NFSW 0x0040b2a7
-GAME_FUNC void DEFAULT_CALL AISpeeds_StartUp(void)
+void DEFAULT_CALL AISpeeds_StartUp(void)
 {
     CALL_WATCALL_VOID_0(0x0040b2a7);
 }
 
 // GLOBAL - 0001:0000a2e9 AISpeeds_CleanUp_ 0040b2e9 (code)
 // LOCAL  - 01BC: NEAR_RTN_386 (return type = 21) (none)
+GAME_FUNC
 // STUB: NFSW 0x0040b2e9
-GAME_FUNC void DEFAULT_CALL AISpeeds_CleanUp(void)
+void DEFAULT_CALL AISpeeds_CleanUp(void)
 {
     CALL_WATCALL_VOID_0(0x0040b2e9);
 }
 
 // GLOBAL - 0001:0000a308 AISpeeds_SaveSpeeds_ 0040b308 (code)
 // LOCAL  - 01E1: NEAR_RTN_386 (return type = 67) (none)
+GAME_FUNC
 // STUB: NFSW 0x0040b308
-GAME_FUNC void DEFAULT_CALL AISpeeds_SaveSpeeds()
+void DEFAULT_CALL AISpeeds_SaveSpeeds()
 {
     CALL_WATCALL_VOID_0(0x0040b308);
 }
 
 // GLOBAL - 0001:0000a33e AISpeeds_SaveLines_ 0040b33e (code)
 // LOCAL  - 0209: NEAR_RTN_386 (return type = 67) (none)
+GAME_FUNC
 // STUB: NFSW 0x0040b33e
-GAME_FUNC void DEFAULT_CALL AISpeeds_SaveLines()
+void DEFAULT_CALL AISpeeds_SaveLines()
 {
     CALL_WATCALL_VOID_0(0x0040b33e);
 }
@@ -99,8 +105,9 @@ GAME_FUNC void DEFAULT_CALL AISpeeds_SaveLines()
 // LOCAL  - 0244: NEAR_RTN_386 (return type = 191) (none)
 // ARG 0  - 0278: LOCAL (type = 189)
 // ARG 1  - 0282: LOCAL (type = 190)
+GAME_FUNC
 // STUB: NFSW 0x0040b374
-GAME_FUNC void DEFAULT_CALL AISpeeds_ScaleAcceleration(Car_tObj* pCar, short* table)
+void DEFAULT_CALL AISpeeds_ScaleAcceleration(Car_tObj* pCar, short* table)
 {
     // int loop; // 028D: LOCAL (type = 9)
     // int carType; // 0296: LOCAL (type = 9)

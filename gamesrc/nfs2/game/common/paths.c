@@ -15,8 +15,9 @@
 // GLOBAL - 0001:00030275 Paths_ReadTillEOL_ 00431275 (code)
 // LOCAL  - 002F: NEAR_RTN_386 (return type = 41) (none)
 // ARG 0  - 0057: LOCAL (type = 40) (EAX)
+GAME_FUNC
 // STUB: NFSW 0x00431275
-GAME_FUNC void DEFAULT_CALL Paths_ReadTillEOL(char** a)
+void DEFAULT_CALL Paths_ReadTillEOL(char** a)
 {
     CALL_WATCALL_VOID_1(0x00431275,
         char** a,
@@ -27,8 +28,9 @@ GAME_FUNC void DEFAULT_CALL Paths_ReadTillEOL(char** a)
 // GLOBAL - 0001:000302ac Paths_ReadTillNotEOL_ 004312ac (code)
 // LOCAL  - 005D: NEAR_RTN_386 (return type = 41) (none)
 // ARG 0  - 0088: LOCAL (type = 40) (EAX)
+GAME_FUNC
 // STUB: NFSW 0x004312ac
-GAME_FUNC void DEFAULT_CALL Paths_ReadTillNotEOL(char** a)
+void DEFAULT_CALL Paths_ReadTillNotEOL(char** a)
 {
     CALL_WATCALL_VOID_1(0x004312ac,
         char** a,
@@ -38,8 +40,9 @@ GAME_FUNC void DEFAULT_CALL Paths_ReadTillNotEOL(char** a)
 
 // GLOBAL - 0001:000302e1 Paths_StartUp_ 004312e1 (code)
 // LOCAL  - 008E: NEAR_RTN_386 (return type = 23) (none)
+GAME_FUNC
 // STUB: NFSW 0x004312e1
-GAME_FUNC void DEFAULT_CALL Paths_StartUp(void)
+void DEFAULT_CALL Paths_StartUp(void)
 {
     // char* scan; // 00B0: LOCAL (type = 13)
     // char* end; // 00B9: LOCAL (type = 13)
@@ -50,8 +53,9 @@ GAME_FUNC void DEFAULT_CALL Paths_StartUp(void)
 
 // GLOBAL - 0001:000303ab Paths_CleanUp_ 004313ab (code)
 // LOCAL  - 00D0: NEAR_RTN_386 (return type = 23) (none)
+GAME_FUNC
 // STUB: NFSW 0x004313ab
-GAME_FUNC void DEFAULT_CALL Paths_CleanUp(void)
+void DEFAULT_CALL Paths_CleanUp(void)
 {
     CALL_WATCALL_VOID_0(0x004313ab);
 }

@@ -23,8 +23,9 @@
 // ARG 1  - 0087: LOCAL (type = 4) (EDX)
 // ARG 2  - 0093: LOCAL (type = 7) (EBX)
 // ARG 3  - 009C: LOCAL (type = 13) (ECX)
+GAME_FUNC
 // STUB: NFSW 0x0042c11d
-GAME_FUNC short DEFAULT_CALL MinFront_Scan(char** s, char endchar, short size, char* d)
+short DEFAULT_CALL MinFront_Scan(char** s, char endchar, short size, char* d)
 {
     // short i; // 00A2: LOCAL (type = 7)
 
@@ -40,8 +41,9 @@ GAME_FUNC short DEFAULT_CALL MinFront_Scan(char** s, char endchar, short size, c
 // ARG 1  - 00DC: LOCAL (type = 4) (EDX)
 // ARG 2  - 00E8: LOCAL (type = 7) (EBX)
 // ARG 3  - 00F1: LOCAL (type = 13) (ECX)
+GAME_FUNC
 // STUB: NFSW 0x0042c1b6
-GAME_FUNC void DEFAULT_CALL MinFront_BackScan(char** s, char endchar, short size, char* d)
+void DEFAULT_CALL MinFront_BackScan(char** s, char endchar, short size, char* d)
 {
     // short i; // 00F7: LOCAL (type = 7)
 
@@ -54,8 +56,9 @@ GAME_FUNC void DEFAULT_CALL MinFront_BackScan(char** s, char endchar, short size
 // GLOBAL - 0001:0002b262 MinFront_LookupParam_ 0042c262 (code)
 // LOCAL  - 010F: NEAR_RTN_386 (return type = 71) (EAX)
 // ARG 0  - 013B: LOCAL (type = 13) (EAX)
+GAME_FUNC
 // STUB: NFSW 0x0042c262
-GAME_FUNC int DEFAULT_CALL MinFront_LookupParam(char* s)
+int DEFAULT_CALL MinFront_LookupParam(char* s)
 {
     // int count; // 0141: LOCAL (type = 9)
     // int acc; // 014B: LOCAL (type = 9)
@@ -75,8 +78,9 @@ GAME_FUNC int DEFAULT_CALL MinFront_LookupParam(char* s)
 // GLOBAL - 0001:0002b47f MinFront_LookupDevice_ 0042c47f (code)
 // LOCAL  - 016E: NEAR_RTN_386 (return type = 71) (EAX)
 // ARG 0  - 019B: LOCAL (type = 13) (EAX)
+GAME_FUNC
 // STUB: NFSW 0x0042c47f
-GAME_FUNC int DEFAULT_CALL MinFront_LookupDevice(char* devicename)
+int DEFAULT_CALL MinFront_LookupDevice(char* devicename)
 {
     // struct Input_tDeviceList* d; // 01AA: LOCAL (type = 75)
     // int i; // 01B0: LOCAL (type = 9)
@@ -92,8 +96,9 @@ GAME_FUNC int DEFAULT_CALL MinFront_LookupDevice(char* devicename)
 // ARG 0  - 01E8: LOCAL (type = 67) (EAX)
 // ARG 1  - 01EE: LOCAL (type = 13) (EDX)
 // ARG 2  - 01F6: LOCAL (type = 9) (EBX)
+GAME_FUNC
 // STUB: NFSW 0x0042c4e1
-GAME_FUNC int DEFAULT_CALL MinFront_LookupHandler(char** s, char* adr, int len)
+int DEFAULT_CALL MinFront_LookupHandler(char** s, char* adr, int len)
 {
     // char name[64]; // 01FE: LOCAL (type = 77)
     // int r; // 0207: LOCAL (type = 9)
@@ -110,8 +115,9 @@ GAME_FUNC int DEFAULT_CALL MinFront_LookupHandler(char** s, char* adr, int len)
 // ARG 1  - 02A3: LOCAL (return type = 13) (EDX)
 // ARG 2  - 02AB: LOCAL (return type = 9) (EBX)
 // ARG 3  - 02B3: LOCAL (return type = 80) (ECX)
+GAME_FUNC
 // STUB: NFSW 0x0042c57e
-GAME_FUNC void DEFAULT_CALL MinFront_Evaluate(char** s, char* adr, int len, int** stream)
+void DEFAULT_CALL MinFront_Evaluate(char** s, char* adr, int len, int** stream)
 {
     // char name[64]; // 02BE: LOCAL (type = 82)
     // char* n; // 02C7: LOCAL (type = 13)
@@ -140,8 +146,9 @@ GAME_FUNC void DEFAULT_CALL MinFront_Evaluate(char** s, char* adr, int len, int*
 // LOCAL  - 02D9: NEAR_RTN_386 (return type = 84) (none)
 // ARG 0  - 0304: LOCAL (type = 13) (EAX)
 // ARG 1  - 0311: LOCAL (type = 80) (EDX)
+GAME_FUNC
 // STUB: NFSW 0x0042cafb
-GAME_FUNC void DEFAULT_CALL MinFront_ParseFile(char* filename, int** stream)
+void DEFAULT_CALL MinFront_ParseFile(char* filename, int** stream)
 {
     // MEMBLOCK* mapfile; // 031C: LOCAL (type = 85)
     // char* s; // 0328: LOCAL (type = 13)
@@ -159,8 +166,9 @@ GAME_FUNC void DEFAULT_CALL MinFront_ParseFile(char* filename, int** stream)
 // ARG 0  - 0372: LOCAL (type = 9) (EAX)
 // ARG 1  - 037B: LOCAL (type = 86) (EDX)
 // ARG 2  - 0384: LOCAL (type = 80) (EBX)
+GAME_FUNC
 // STUB: NFSW 0x0042cbd5
-GAME_FUNC void DEFAULT_CALL MinFront_ParseCommandLine(int argc, char** argv, int** stream)
+void DEFAULT_CALL MinFront_ParseCommandLine(int argc, char** argv, int** stream)
 {
     // char* s; // 038F: LOCAL (type = 13)
     // char* adr; // 0395: LOCAL (type = 13)
@@ -175,8 +183,9 @@ GAME_FUNC void DEFAULT_CALL MinFront_ParseCommandLine(int argc, char** argv, int
 // GLOBAL - 0001:0002bc55 MinFront_ParseArgv_ 0042cc55 (code)
 // LOCAL  - 03A5: NEAR_RTN_386 (return type = 88) (none)
 // ARG 0  - 03CE: LOCAL (type = 80) (EAX)
+GAME_FUNC
 // STUB: NFSW 0x0042cc55
-GAME_FUNC void DEFAULT_CALL MinFront_ParseArgv(int** stream)
+void DEFAULT_CALL MinFront_ParseArgv(int** stream)
 {
     // MEMBLOCK* argv; // 03D9: LOCAL (type = 85)
     // char* s; // 03E2: LOCAL (type = 13)
@@ -193,8 +202,9 @@ GAME_FUNC void DEFAULT_CALL MinFront_ParseArgv(int** stream)
 // LOCAL  - 0416: NEAR_RTN_386 (return type = 90) (EAX)
 // ARG 0  - 0445: LOCAL (type = 9) (EAX)
 // ARG 1  - 044E: LOCAL (type = 86) (EDX)
+GAME_FUNC
 // STUB: NFSW 0x0042cd1f
-GAME_FUNC int* DEFAULT_CALL MinFront_ParseOptions(int argc, char** argv)
+int* DEFAULT_CALL MinFront_ParseOptions(int argc, char** argv)
 {
     // char* filename; // 0457: LOCAL (type = 67)
     // int* stream;// 0464: LOCAL (type = 78)

@@ -15,8 +15,9 @@ typedef struct coorddef{int fakeValue;} LIBCOORD;
 // GLOBAL - 0001:00061257 TrnfPlat_SetLightContext_ 00462257 (code)
 // LOCAL  - 001C: NEAR_RTN_386 (return type = 67) (none)
 // ARG 0  - 004B: LOCAL (type = 7) (EAX)
+GAME_FUNC
 // STUB: NFSW 0x00462257
-GAME_FUNC void DEFAULT_CALL TrnfPlat_SetLightContext(short lightContext)
+void DEFAULT_CALL TrnfPlat_SetLightContext(short lightContext)
 {
     CALL_WATCALL_VOID_1(0x00462257,
         short lightContext,
@@ -31,8 +32,9 @@ GAME_FUNC void DEFAULT_CALL TrnfPlat_SetLightContext(short lightContext)
 // ARG 2  - 00D9: LOCAL (type = 116) (EBX)
 // ARG 3  - 00DF: LOCAL (type = 9) (ECX)
 // ARG 4  - 00F4: LOCAL (type = 9)
+GAME_FUNC
 // STUB: NFSW 0x00462271
-GAME_FUNC void DEFAULT_CALL TrnfPlat_BuildFacetlist(Transformer_tObj* obj, MATRIX3DT* m, LIBCOORD* t, int partLinkPriority, int textureStartIndex)
+void DEFAULT_CALL TrnfPlat_BuildFacetlist(Transformer_tObj* obj, MATRIX3DT* m, LIBCOORD* t, int partLinkPriority, int textureStartIndex)
 {
     // int i; // 010A: LOCAL (type = 9)
     // Draw_tVertex* vertice; // 0110: LOCAL (type = 81)
