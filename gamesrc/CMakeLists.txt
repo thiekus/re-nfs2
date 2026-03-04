@@ -38,7 +38,7 @@ file(GLOB RENFS2_SOURCES
 )
 
 # NFS2 sources
-file(GLOB NFS2_SOURCES
+set(NFS2_SOURCES
     # C sources sorted based from debug info
     nfs2/game/common/ai.c
     nfs2/game/common/aiphysic.c
@@ -143,7 +143,9 @@ file(GLOB NFS2_SOURCES
     nfs2/frontend/pc/Mouse.c
     nfs2/frontend/pc/Modem.c
     nfs2/frontend/pc/movilite.c
-    # Headers
+)
+
+file(GLOB NFS2_HEADERS
     nfs2/game/common/*.h
     nfs2/game/pc/*.h
     nfs2/frontend/common/*.h
@@ -158,6 +160,7 @@ include_directories("$ENV{WATCOM}/h/nt")
 
 set(RENFS2_DLL_SOURCES
     ${NFS2_SOURCES}
+    ${NFS2_HEADERS}
     ${EACLIB_SOURCES}
     ${RENFS2_SOURCES}
     ${EACSTUB_SOURCES}
